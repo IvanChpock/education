@@ -469,5 +469,6 @@ btn.addEventListener('click',function(){
 var obs=new IntersectionObserver(function(e){e.forEach(function(i){if(i.isIntersecting)i.target.classList.add('visible');});},{threshold:0.06});
 document.querySelectorAll('.fade-up').forEach(function(el){obs.observe(el);});
 </script>
+<script src="menu.js"></script>
 </body>
 </html>
