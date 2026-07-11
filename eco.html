@@ -164,13 +164,7 @@ footer p{font-size:.78rem;color:var(--faint);}
 </style>
 </head>
 <body>
-
-<nav style="position:fixed;top:20px;left:20px;z-index:9999;background:#111;padding:12px;border-radius:12px;">
-  <a href="index.html" style="color:white;margin-right:12px;">Главная</a>
-  <a href="crypto.html" style="color:white;margin-right:12px;">Crypto</a>
-  <a href="eco.html" style="color:white;margin-right:12px;">Eco</a>
-  <a href="site.html" style="color:white;">Site</a>
-</nav>
+<script src="menu.js"></script>
   
 <header>
   <div class="nav w">
@@ -469,6 +463,5 @@ btn.addEventListener('click',function(){
 var obs=new IntersectionObserver(function(e){e.forEach(function(i){if(i.isIntersecting)i.target.classList.add('visible');});},{threshold:0.06});
 document.querySelectorAll('.fade-up').forEach(function(el){obs.observe(el);});
 </script>
-<script src="menu.js"></script>
 </body>
 </html>
