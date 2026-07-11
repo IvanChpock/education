@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Стейкинг USDT — пассивный доход в долларах | Онлайн профессии</title>
+<meta name="description" content="Зарабатывай пассивный доход в долларах на стейкинге USDT. Bybit и OKX — лучшие биржи с приветственными бонусами до $30 000 и скидкой на комиссии.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;-webkit-font-smoothing:antialiased;}
+
+[data-theme="light"]{
+  --accent:#f7931a;--accent-h:#d97c0e;--accent-lt:#fff3e0;--accent-glow:rgba(247,147,26,.2);
+  --green:#16a34a;--green-lt:rgba(22,163,74,.1);
+  --blue:#2563eb;--blue-lt:rgba(37,99,235,.08);
+  --bybit:#f7a600;--okx:#1a1a2e;
+  --grad:linear-gradient(135deg,#f7931a 0%,#e8520a 100%);
+  --grad2:linear-gradient(135deg,#1a1a2e 0%,#16213e 100%);
+  --text:#0f0d0a;--muted:#6b6055;--faint:#b0a898;
+  --bg:#faf9f6;--surface:#fff;--surface2:#f5f3ee;--border:#e8e2d8;
+  --shadow-sm:0 2px 8px rgba(247,147,26,.08);
+  --shadow-md:0 8px 28px rgba(247,147,26,.14);
+  --shadow-lg:0 20px 60px rgba(247,147,26,.18);
+}
+[data-theme="dark"]{
+  --accent:#fbbf24;--accent-h:#f59e0b;--accent-lt:rgba(251,191,36,.12);--accent-glow:rgba(251,191,36,.2);
+  --green:#4ade80;--green-lt:rgba(74,222,128,.1);
+  --blue:#60a5fa;--blue-lt:rgba(96,165,250,.08);
+  --bybit:#f7a600;--okx:#a78bfa;
+  --grad:linear-gradient(135deg,#fbbf24 0%,#f97316 100%);
+  --grad2:linear-gradient(135deg,#312e81 0%,#1e1b4b 100%);
+  --text:#f5f0e8;--muted:#a89e90;--faint:#6b6258;
+  --bg:#0c0b08;--surface:#131108;--surface2:#1a1810;--border:#2a2618;
+  --shadow-sm:0 2px 8px rgba(0,0,0,.3);
+  --shadow-md:0 8px 28px rgba(0,0,0,.4);
+  --shadow-lg:0 20px 60px rgba(0,0,0,.5);
+}
+
+body{font-family:'Inter',sans-serif;color:var(--text);background:var(--bg);line-height:1.65;transition:background .3s,color .3s;}
+a{text-decoration:none;color:inherit;}
+
+.w{max-width:1000px;margin-inline:auto;padding-inline:1.5rem;}
+.wn{max-width:720px;margin-inline:auto;padding-inline:1.5rem;}
+
+/* HEADER */
+header{background:var(--surface);border-bottom:1px solid var(--border);padding-block:.85rem;position:sticky;top:0;z-index:100;transition:background .3s;}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:1rem;}
+.logo{font-size:1rem;font-weight:800;background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;white-space:nowrap;}
+.nav-right{display:flex;align-items:center;gap:.75rem;}
+.theme-btn{width:38px;height:38px;border-radius:50%;background:var(--surface2);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;font-size:1rem;cursor:pointer;}
+
+/* HERO */
+.hero{background:var(--surface);border-bottom:1px solid var(--border);padding-block:clamp(3rem,9vw,6rem);position:relative;overflow:hidden;}
+.hero::before{content:'';position:absolute;right:-150px;top:-150px;width:500px;height:500px;border-radius:50%;background:radial-gradient(circle,var(--accent-glow) 0%,transparent 65%);pointer-events:none;}
+.hero-inner{position:relative;z-index:1;}
+.hero-tag{display:inline-flex;align-items:center;gap:.4rem;background:var(--accent-lt);border:1px solid rgba(247,147,26,.2);font-size:.72rem;font-weight:700;color:var(--accent);letter-spacing:.08em;text-transform:uppercase;padding:.3rem .9rem;border-radius:999px;margin-bottom:1.5rem;}
+.hero h1{font-size:clamp(2rem,1rem + 3.5vw,3.6rem);font-weight:900;line-height:1.12;margin-bottom:1.25rem;}
+.hero h1 em{font-style:normal;background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
+.hero-lead{font-size:1.05rem;color:var(--muted);line-height:1.85;max-width:58ch;margin-bottom:2rem;}
+.hero-chips{display:flex;flex-wrap:wrap;gap:.6rem;margin-bottom:2.5rem;}
+.chip{background:var(--surface2);border:1px solid var(--border);border-radius:999px;font-size:.8rem;font-weight:600;color:var(--muted);padding:.35rem 1rem;}
+.chip strong{color:var(--text);}
+.hero-btns{display:flex;gap:1rem;flex-wrap:wrap;}
+.btn-main{display:inline-flex;align-items:center;gap:.4rem;background:var(--grad);color:#fff;font-size:.9rem;font-weight:700;padding:.9rem 2rem;border-radius:999px;box-shadow:0 6px 24px var(--accent-glow);transition:opacity .18s,transform .18s;}
+.btn-main:hover{opacity:.9;transform:translateY(-1px);}
+.btn-ghost{display:inline-flex;align-items:center;gap:.4rem;background:transparent;color:var(--text);font-size:.88rem;font-weight:600;padding:.85rem 1.5rem;border-radius:999px;border:1.5px solid var(--border);transition:border-color .18s,color .18s;}
+.btn-ghost:hover{border-color:var(--accent);color:var(--accent);}
+
+/* WHAT */
+.what{padding-block:clamp(2.5rem,6vw,5rem);background:var(--surface2);border-bottom:1px solid var(--border);}
+.sec-label{font-size:.7rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);margin-bottom:.5rem;}
+.sec-h{font-size:clamp(1.4rem,1rem + 1.8vw,2.1rem);font-weight:800;margin-bottom:.6rem;}
+.sec-sub{font-size:.92rem;color:var(--muted);max-width:55ch;line-height:1.8;margin-bottom:2rem;}
+.what-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem;}
+.what-card{background:var(--surface);border:1px solid var(--border);border-radius:1.2rem;padding:1.5rem;box-shadow:var(--shadow-sm);}
+.what-icon{font-size:1.8rem;margin-bottom:.75rem;}
+.what-t{font-size:.95rem;font-weight:700;margin-bottom:.4rem;}
+.what-card p{font-size:.82rem;color:var(--muted);line-height:1.75;}
+
+/* HOW */
+.how{padding-block:clamp(2.5rem,6vw,5rem);}
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;position:relative;margin-top:2rem;}
+.steps::before{content:'';position:absolute;top:28px;left:12%;right:12%;height:1px;background:var(--border);}
+.step{text-align:center;padding:.5rem;}
+.step-n{width:56px;height:56px;border-radius:50%;background:var(--grad);color:#fff;font-size:1.2rem;font-weight:800;display:flex;align-items:center;justify-content:center;margin:0 auto .85rem;position:relative;z-index:1;box-shadow:0 4px 14px var(--accent-glow);}
+.step-t{font-size:.88rem;font-weight:700;margin-bottom:.3rem;}
+.step p{font-size:.78rem;color:var(--muted);line-height:1.65;}
+
+/* EXCHANGE CARDS */
+.exchanges{padding-block:clamp(2.5rem,6vw,5rem);background:var(--surface2);border-top:1px solid var(--border);border-bottom:1px solid var(--border);}
+.ex-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin-top:2rem;}
+
+/* Bybit */
+.ex-card{background:var(--surface);border-radius:1.5rem;border:1px solid var(--border);box-shadow:var(--shadow-md);overflow:hidden;transition:box-shadow .2s,transform .2s;}
+.ex-card:hover{box-shadow:var(--shadow-lg);transform:translateY(-3px);}
+.ex-head{padding:1.75rem;display:flex;align-items:center;gap:1rem;}
+.ex-logo{width:52px;height:52px;border-radius:1rem;display:flex;align-items:center;justify-content:center;font-size:1.4rem;font-weight:900;color:#fff;flex-shrink:0;}
+.bybit-logo{background:linear-gradient(135deg,#f7a600 0%,#e8870a 100%);}
+.okx-logo{background:linear-gradient(135deg,#1a1a2e 0%,#2d2d5e 100%);}
+[data-theme="dark"] .okx-logo{background:linear-gradient(135deg,#312e81 0%,#4338ca 100%);}
+.ex-name{font-size:1.2rem;font-weight:800;}
+.ex-rank{font-size:.72rem;color:var(--muted);margin-top:.15rem;}
+.ex-body{padding:0 1.75rem 1.75rem;}
+.bonus-box{border-radius:1rem;padding:1.25rem;margin-bottom:1.25rem;}
+.bybit-bonus{background:linear-gradient(135deg,rgba(247,166,0,.12) 0%,rgba(232,135,10,.08) 100%);border:1px solid rgba(247,166,0,.25);}
+.okx-bonus{background:var(--blue-lt);border:1px solid rgba(37,99,235,.15);}
+[data-theme="dark"] .okx-bonus{border-color:rgba(96,165,250,.2);}
+.bonus-title{font-size:.72rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;margin-bottom:.85rem;}
+.bybit-bonus .bonus-title{color:var(--bybit);}
+.okx-bonus .bonus-title{color:var(--blue);}
+[data-theme="dark"] .okx-bonus .bonus-title{color:var(--blue);}
+.bonus-list{display:flex;flex-direction:column;gap:.6rem;}
+.bonus-item{display:flex;align-items:flex-start;gap:.6rem;font-size:.85rem;line-height:1.55;}
+.bi-icon{font-size:1.05rem;flex-shrink:0;margin-top:.05rem;}
+.bi-text strong{color:var(--text);font-weight:700;}
+.bi-text span{color:var(--muted);font-size:.82rem;}
+.earn-row{display:grid;grid-template-columns:1fr 1fr;gap:.75rem;margin-bottom:1.5rem;}
+.earn-item{background:var(--surface2);border:1px solid var(--border);border-radius:.85rem;padding:.85rem;text-align:center;}
+.earn-val{font-size:1.15rem;font-weight:800;background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
+.earn-l{font-size:.72rem;color:var(--muted);margin-top:.2rem;}
+.btn-ex{display:flex;align-items:center;justify-content:center;gap:.4rem;padding:.9rem 1.5rem;border-radius:999px;font-size:.88rem;font-weight:700;color:#fff;transition:opacity .18s,transform .18s;width:100%;}
+.btn-ex:hover{opacity:.9;transform:translateY(-1px);}
+.btn-bybit{background:linear-gradient(135deg,#f7a600 0%,#e8870a 100%);box-shadow:0 4px 18px rgba(247,166,0,.3);}
+.btn-okx{background:linear-gradient(135deg,#2563eb 0%,#7c3aed 100%);box-shadow:0 4px 18px rgba(37,99,235,.3);}
+
+/* BESTCHANGE */
+.bestchange{padding-block:clamp(2rem,5vw,4rem);}
+.bc-card{background:var(--surface);border:1px solid var(--border);border-radius:1.25rem;padding:2rem;display:flex;align-items:center;gap:2rem;box-shadow:var(--shadow-sm);}
+.bc-icon{font-size:3rem;flex-shrink:0;}
+.bc-text h3{font-size:1.1rem;font-weight:800;margin-bottom:.5rem;}
+.bc-text p{font-size:.88rem;color:var(--muted);line-height:1.75;max-width:48ch;margin-bottom:1rem;}
+.btn-bc{display:inline-flex;align-items:center;gap:.4rem;background:var(--surface2);border:1.5px solid var(--border);color:var(--text);font-size:.85rem;font-weight:700;padding:.75rem 1.5rem;border-radius:999px;transition:border-color .18s,color .18s;}
+.btn-bc:hover{border-color:var(--accent);color:var(--accent);}
+
+/* FAQ */
+.faq{padding-block:clamp(2.5rem,6vw,5rem);background:var(--surface2);border-top:1px solid var(--border);}
+.faq-list{display:flex;flex-direction:column;gap:.75rem;margin-top:2rem;}
+.faq-item{background:var(--surface);border:1px solid var(--border);border-radius:1rem;overflow:hidden;}
+.faq-q{width:100%;text-align:left;padding:1.1rem 1.25rem;font-size:.92rem;font-weight:700;color:var(--text);display:flex;align-items:center;justify-content:space-between;gap:1rem;cursor:pointer;background:none;border:none;font-family:inherit;}
+.faq-q:hover{color:var(--accent);}
+.faq-arrow{font-size:.85rem;transition:transform .25s;flex-shrink:0;}
+.faq-a{max-height:0;overflow:hidden;transition:max-height .3s ease,padding .3s ease;}
+.faq-a p{padding:0 1.25rem 1.1rem;font-size:.87rem;color:var(--muted);line-height:1.8;}
+.faq-item.open .faq-arrow{transform:rotate(180deg);}
+.faq-item.open .faq-a{max-height:300px;}
+
+/* RISK */
+.risk{padding-block:clamp(2rem,5vw,3.5rem);}
+.risk-box{background:rgba(234,179,8,.08);border:1px solid rgba(234,179,8,.25);border-radius:1.25rem;padding:1.75rem;display:flex;gap:1.25rem;align-items:flex-start;}
+[data-theme="dark"] .risk-box{background:rgba(234,179,8,.06);border-color:rgba(234,179,8,.2);}
+.risk-icon{font-size:1.8rem;flex-shrink:0;margin-top:.1rem;}
+.risk-text h4{font-size:.95rem;font-weight:700;margin-bottom:.5rem;color:#b45309;}
+[data-theme="dark"] .risk-text h4{color:#fbbf24;}
+.risk-text p{font-size:.85rem;color:var(--muted);line-height:1.8;}
+
+/* FOOTER */
+footer{background:var(--surface);border-top:1px solid var(--border);padding-block:1.5rem;text-align:center;}
+footer p{font-size:.78rem;color:var(--faint);}
+
+/* ANIM */
+.fade-up{opacity:0;transform:translateY(18px);transition:opacity .5s ease,transform .5s ease;}
+.fade-up.visible{opacity:1;transform:translateY(0);}
+
+@media(max-width:768px){.what-grid{grid-template-columns:1fr 1fr;}.steps{grid-template-columns:1fr 1fr;}.steps::before{display:none;}.ex-grid{grid-template-columns:1fr;}.bc-card{flex-direction:column;gap:1rem;}}
+@media(max-width:480px){.what-grid{grid-template-columns:1fr;}.earn-row{grid-template-columns:1fr 1fr;}.hero-btns{flex-direction:column;align-items:flex-start;}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="nav w">
+    <a class="logo" href="#">₿ Онлайн профессии · Криптовалюта</a>
+    <div class="nav-right">
+      <button class="theme-btn" id="themeBtn" aria-label="Тема">🌙</button>
+    </div>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="w hero-inner">
+    <div class="hero-tag">🪙 Криптовалюта без трейдинга · Пассивный доход</div>
+    <h1>Долларовый вклад,<br>только <em>в 5–10 раз выгоднее</em></h1>
+    <p class="hero-lead">
+      Большинство боятся крипты, потому что думают: нужно угадывать курс, рисковать и разбираться в графиках.<br>
+      Но есть намного спокойнее способ — положить деньги в USDT и каждый день получать начисления в долларах. Как банковский вклад, только доходность в разы выше.
+    </p>
+    <div class="hero-chips">
+      <div class="chip">💵 <strong>USDT = $1</strong> · курс не колеблется</div>
+      <div class="chip">📈 <strong>Ежедневные начисления</strong> в долларах</div>
+      <div class="chip">🔓 <strong>Вывод в любой момент</strong></div>
+      <div class="chip">🎁 <strong>Бонус до $30 000</strong> при регистрации</div>
+      <div class="chip">💸 <strong>Скидка до 30%</strong> на комиссии навсегда</div>
+    </div>
+    <div class="hero-btns">
+      <a class="btn-main" href="https://www.bybit.com/invite?ref=Z6MP7R" target="_blank" >🟡 Начать на Bybit — бонус до $30 000</a>
+      <a class="btn-ghost">Сравнить биржи ↓</a>
+    </div>
+  </div>
+</section>
+
+<!-- WHAT IS -->
+<section class="what">
+  <div class="w">
+    <div class="sec-label">Что такое стейкинг USDT</div>
+    <h2 class="sec-h">Криптовалюта — это не только трейдинг</h2>
+    <p class="sec-sub">Есть тихий и предсказуемый способ зарабатывать на крипте — без графиков, без нервов, без угадывания курса.</p>
+    <div class="what-grid">
+      <div class="what-card fade-up">
+        <div class="what-icon">🪙</div>
+        <div class="what-t">USDT — это доллар в крипте</div>
+        <p>Stablecoin: 1 USDT = 1 USD всегда. Никакой волатильности. Ты не рискуешь курсом — просто держишь доллары на бирже.</p>
+      </div>
+      <div class="what-card fade-up">
+        <div class="what-icon">🏦</div>
+        <div class="what-t">Earn / Flexible Savings</div>
+        <p>Биржа берёт твои USDT, выдаёт кредиты трейдерам, а тебе платит % каждый день. Похоже на вклад, только ставка выше и вывод без ограничений.</p>
+      </div>
+      <div class="what-card fade-up">
+        <div class="what-icon">💸</div>
+        <div class="what-t">Доходность: 5–15% годовых</div>
+        <p>Обычный банковский вклад — 3–5%. Flexible Earn на Bybit/OKX — 5–15% годовых в USDT. Начисления капают каждый день.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="how">
+  <div class="w">
+    <div class="sec-label">Как начать</div>
+    <h2 class="sec-h">4 шага до первых начислений</h2>
+    <p class="sec-sub">Весь процесс занимает 15–30 минут. Технических знаний не нужно.</p>
+    <div class="steps">
+      <div class="step fade-up">
+        <div class="step-n">1</div>
+        <div class="step-t">Регистрация</div>
+        <p>Создай аккаунт на Bybit или OKX по реф-ссылке — автоматически получишь скидку на комиссии</p>
+      </div>
+      <div class="step fade-up">
+        <div class="step-n">2</div>
+        <div class="step-t">Пополнение</div>
+        <p>Купи USDT на p2p-рынке за рубли прямо на бирже — быстро, без лишних шагов</p>
+      </div>
+      <div class="step fade-up">
+        <div class="step-n">3</div>
+        <div class="step-t">Earn / Savings</div>
+        <p>Открой раздел Earn → Flexible Savings → выбери USDT → подтверди. Старт от $1</p>
+      </div>
+      <div class="step fade-up">
+        <div class="step-n">4</div>
+        <div class="step-t">Получай %</div>
+        <p>Начисления капают каждый день. Выводи в любой момент — без блокировок и сроков</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EXCHANGE CARDS -->
+<section class="exchanges" id="exchanges">
+  <div class="w">
+    <div class="sec-label">Биржи с реф-бонусами</div>
+    <h2 class="sec-h">Bybit и OKX — лучший старт для стейкинга</h2>
+    <p class="sec-sub">По реферальным ссылкам ниже — приветственные бонусы и пониженные комиссии с первого дня навсегда.</p>
+    <div class="ex-grid">
+
+      <!-- BYBIT -->
+      <div class="ex-card fade-up">
+        <div class="ex-head">
+          <div class="ex-logo bybit-logo">B</div>
+          <div>
+            <div class="ex-name">Bybit</div>
+            <div class="ex-rank">⭐ Топ-3 биржа мира · Поддержка на русском</div>
+          </div>
+        </div>
+        <div class="ex-body">
+          <div class="bonus-box bybit-bonus">
+            <div class="bonus-title">🎁 Бонус по реф-ссылке</div>
+            <div class="bonus-list">
+              <div class="bonus-item">
+                <div class="bi-icon">🎁</div>
+                <div class="bi-text"><strong>До $30 000 USDT</strong> <span>— приветственный бонус за депозит и первую сделку (выполни простые задания в разделе Rewards)</span></div>
+              </div>
+              <div class="bonus-item">
+                <div class="bi-icon">💸</div>
+                <div class="bi-text"><strong>Скидка 20–30% на комиссии</strong> <span>— навсегда, применяется автоматически с первого дня</span></div>
+              </div>
+              <div class="bonus-item">
+                <div class="bi-icon">📈</div>
+                <div class="bi-text"><strong>Flexible Savings в USDT</strong> <span>— ежедневные начисления, вывод без ограничений</span></div>
+              </div>
+            </div>
+          </div>
+          <div class="earn-row">
+            <div class="earn-item"><div class="earn-val">$1</div><div class="earn-l">минимальный депозит</div></div>
+            <div class="earn-item"><div class="earn-val">5–12%</div><div class="earn-l">годовых в USDT</div></div>
+            <div class="earn-item"><div class="earn-val">Каждый день</div><div class="earn-l">начисления</div></div>
+            <div class="earn-item"><div class="earn-val">В любой момент</div><div class="earn-l">вывод</div></div>
+          </div>
+          <a class="btn-ex btn-bybit" href="https://www.bybit.com/invite?ref=Z6MP7R" target="_blank" >🟡 Зарегистрироваться на Bybit →</a>
+        </div>
+      </div>
+
+      <!-- OKX -->
+      <div class="ex-card fade-up">
+        <div class="ex-head">
+          <div class="ex-logo okx-logo">OK</div>
+          <div>
+            <div class="ex-name">OKX</div>
+            <div class="ex-rank">⭐ Топ-3 по объёмам · Лучший Earn-раздел</div>
+          </div>
+        </div>
+        <div class="ex-body">
+          <div class="bonus-box okx-bonus">
+            <div class="bonus-title">🎁 Бонус по реф-ссылке</div>
+            <div class="bonus-list">
+              <div class="bonus-item">
+                <div class="bi-icon">🎁</div>
+                <div class="bi-text"><strong>До $10 000 USDT</strong> <span>— приветственный бонус за регистрацию, первый депозит и торговую активность</span></div>
+              </div>
+              <div class="bonus-item">
+                <div class="bi-icon">💸</div>
+                <div class="bi-text"><strong>Скидка 20–30% на комиссии</strong> <span>— применяется автоматически, действует бессрочно</span></div>
+              </div>
+              <div class="bonus-item">
+                <div class="bi-icon">📈</div>
+                <div class="bi-text"><strong>Simple Earn + Staking USDT</strong> <span>— гибкие и фиксированные ставки, ежедневное начисление %</span></div>
+              </div>
+            </div>
+          </div>
+          <div class="earn-row">
+            <div class="earn-item"><div class="earn-val">$1</div><div class="earn-l">минимальный депозит</div></div>
+            <div class="earn-item"><div class="earn-val">6–15%</div><div class="earn-l">годовых в USDT</div></div>
+            <div class="earn-item"><div class="earn-val">Каждый день</div><div class="earn-l">начисления</div></div>
+            <div class="earn-item"><div class="earn-val">Flex / Fixed</div><div class="earn-l">гибкие и фикс ставки</div></div>
+          </div>
+          <a class="btn-ex btn-okx" href="https://okx.com/join/16620521" target="_blank" >🔵 Зарегистрироваться на OKX →</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- BESTCHANGE -->
+<section class="bestchange">
+  <div class="w">
+    <div class="bc-card fade-up">
+      <div class="bc-icon">🔄</div>
+      <div class="bc-text">
+        <h3>Нужно купить или обменять USDT выгодно?</h3>
+        <p>BestChange — агрегатор обменников: в реальном времени показывает лучший курс среди сотен пунктов. Без лишних комиссий и переплат. Проверенный инструмент для покупки крипты за рубли.</p>
+        <a class="btn-bc" href="https://www.bestchange.ru/?p=1339424" target="_blank" >🔍 Найти лучший курс обмена →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq">
+  <div class="w">
+    <div class="sec-label">Частые вопросы</div>
+    <h2 class="sec-h">FAQ — отвечаем честно</h2>
+    <div class="faq-list">
+      <div class="faq-item">
+        <button class="faq-q">Что такое USDT и почему его курс не падает? <span class="faq-arrow">▾</span></button>
+        <div class="faq-a"><p>USDT (Tether) — стейблкоин, привязанный к доллару США 1:1. Его эмитент держит резервы в долларах, поэтому курс практически не отклоняется от $1. Это не инвестиция с риском роста/падения — это просто цифровой доллар.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Как работает Flexible Earn / Savings? <span class="faq-arrow">▾</span></button>
+        <div class="faq-a"><p>Ты кладёшь USDT в пул биржи. Биржа выдаёт их трейдерам под маржу, а тебе платит % от этих займов. Никакого трейдинга, никакого риска курса. Гибкий режим — деньги можно забрать в любой момент без потери начислений.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Как получить бонус до $30 000 на Bybit? <span class="faq-arrow">▾</span></button>
+        <div class="faq-a"><p>После регистрации по реф-ссылке зайди в раздел Rewards Hub → выполни задания: первый депозит от $100, первая сделка на спот или деривативах. Бонусные средства зачисляются по мере выполнения. Бонус нельзя сразу вывести — он используется для покрытия комиссий и убытков по сделкам, что делает старт безопаснее.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Скидка на комиссии — это постоянно? <span class="faq-arrow">▾</span></button>
+        <div class="faq-a"><p>Да. При регистрации через реферальную ссылку скидка применяется к аккаунту автоматически и действует бессрочно. На Bybit и OKX это 20–30% от стандартных комиссий на все операции.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Можно ли пополнить счёт рублями? <span class="faq-arrow">▾</span></button>
+        <div class="faq-a"><p>Да. Обе биржи поддерживают P2P-торговлю: ты переводишь рубли продавцу через СБП или карту, он отправляет тебе USDT прямо на счёт биржи. Процесс занимает 5–15 минут. Либо можно купить USDT через BestChange по лучшему курсу.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Какая реальная доходность? <span class="faq-arrow">▾</span></button>
+        <div class="faq-a"><p>В режиме Flexible Earn — обычно 5–12% годовых в USDT. В фиксированных продуктах (30–90 дней) иногда выше — до 15%. Это выше большинства банковских вкладов в USD и сопоставимо с доходностью на западных рынках облигаций, но без государственных гарантий.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- RISK -->
+<section class="risk">
+  <div class="w">
+    <div class="risk-box fade-up">
+      <div class="risk-icon">⚠️</div>
+      <div class="risk-text">
+        <h4>Честно о рисках</h4>
+        <p>Биржи — это не банки. Государственной страховки вкладов нет. Риск взлома или банкротства биржи существует, пусть и минимален у крупных платформ. USDT в Earn — один из самых консервативных инструментов в крипте, но «нулевого риска» не бывает нигде. Не держи на бирже сумму, потеря которой критична для тебя.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>© 2026 Онлайн профессии · Информация носит ознакомительный характер · Не является финансовой рекомендацией</p>
+</footer>
+
+<script>
+var btn=document.getElementById('themeBtn');
+var root=document.documentElement;
+var saved=localStorage.getItem('nd-theme')||'light';
+root.setAttribute('data-theme',saved);
+btn.textContent=saved==='dark'?'☀️':'🌙';
+btn.addEventListener('click',function(){
+  var t=root.getAttribute('data-theme')==='dark'?'light':'dark';
+  root.setAttribute('data-theme',t);
+  localStorage.setItem('nd-theme',t);
+  btn.textContent=t==='dark'?'☀️':'🌙';
+});
+
+// FAQ
+document.querySelectorAll('.faq-q').forEach(function(q){
+  q.addEventListener('click',function(){
+    var item=this.closest('.faq-item');
+    var wasOpen=item.classList.contains('open');
+    document.querySelectorAll('.faq-item').forEach(function(i){i.classList.remove('open');});
+    if(!wasOpen)item.classList.add('open');
+  });
+});
+
+// FADE
+var obs=new IntersectionObserver(function(e){e.forEach(function(i){if(i.isIntersecting)i.target.classList.add('visible');});},{threshold:0.06});
+document.querySelectorAll('.fade-up').forEach(function(el){obs.observe(el);});
+</script>
+</body>
+</html>

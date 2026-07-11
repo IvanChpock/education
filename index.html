@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Онлайн профессии — заработок из дома 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;-webkit-font-smoothing:antialiased;}
+
+[data-theme="light"]{
+  --pink:#e91e8c;--pink-h:#c4167a;--pink-lt:#fce4f3;--pink-glow:rgba(233,30,140,.18);
+  --purple:#7c3aed;--purple-lt:#ede9fe;
+  --grad:linear-gradient(135deg,#e91e8c 0%,#7c3aed 100%);
+  --grad-soft:linear-gradient(135deg,#fce4f3 0%,#ede9fe 100%);
+  --text:#0f0a1e;--muted:#6b6280;--faint:#b0a8c0;
+  --bg:#faf8ff;--surface:#fff;--surface2:#f4f1fb;--border:#ece8f4;
+  --shadow-sm:0 2px 8px rgba(124,58,237,.07);
+  --shadow-md:0 8px 28px rgba(124,58,237,.12);
+  --shadow-lg:0 20px 60px rgba(124,58,237,.18);
+  --hero-bg:linear-gradient(160deg,#fff 0%,#faf0ff 50%,#f0e8ff 100%);
+}
+[data-theme="dark"]{
+  --pink:#f472b6;--pink-h:#ec4899;--pink-lt:rgba(244,114,182,.12);--pink-glow:rgba(244,114,182,.2);
+  --purple:#a78bfa;--purple-lt:rgba(167,139,250,.12);
+  --grad:linear-gradient(135deg,#f472b6 0%,#a78bfa 100%);
+  --grad-soft:linear-gradient(135deg,rgba(244,114,182,.15) 0%,rgba(167,139,250,.15) 100%);
+  --text:#f0eeff;--muted:#a89ec0;--faint:#6b628a;
+  --bg:#0d0b18;--surface:#141220;--surface2:#1a1730;--border:#2a2545;
+  --shadow-sm:0 2px 8px rgba(0,0,0,.3);
+  --shadow-md:0 8px 28px rgba(0,0,0,.4);
+  --shadow-lg:0 20px 60px rgba(0,0,0,.5);
+  --hero-bg:linear-gradient(160deg,#0d0b18 0%,#120e25 50%,#160b2a 100%);
+}
+
+body{font-family:'Inter',sans-serif;color:var(--text);background:var(--bg);line-height:1.6;transition:background .3s,color .3s;}
+a{text-decoration:none;color:inherit;}
+img{display:block;max-width:100%;}
+
+/* HEADER */
+header{background:var(--surface);border-bottom:1px solid var(--border);padding-block:.85rem;position:sticky;top:0;z-index:100;transition:background .3s;}
+.nav{display:flex;align-items:center;justify-content:space-between;max-width:1140px;margin-inline:auto;padding-inline:1.5rem;gap:1rem;}
+.logo{font-size:1.1rem;font-weight:800;background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;white-space:nowrap;}
+.nav-right{display:flex;align-items:center;gap:.75rem;}
+.nav-badge{background:var(--grad);color:#fff;font-size:.72rem;font-weight:700;padding:.3rem .9rem;border-radius:999px;white-space:nowrap;}
+.theme-btn{width:40px;height:40px;border-radius:50%;background:var(--grad-soft);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;font-size:1.1rem;cursor:pointer;flex-shrink:0;}
+
+/* HERO — 2 колонки */
+.hero{background:var(--hero-bg);padding-block:clamp(3rem,8vw,6rem);border-bottom:1px solid var(--border);position:relative;overflow:hidden;}
+.hero::before{content:'';position:absolute;top:-200px;right:-200px;width:600px;height:600px;border-radius:50%;background:radial-gradient(circle,var(--pink-glow) 0%,transparent 65%);pointer-events:none;}
+.hero::after{content:'';position:absolute;bottom:-150px;left:-150px;width:400px;height:400px;border-radius:50%;background:radial-gradient(circle,rgba(124,58,237,.1) 0%,transparent 65%);pointer-events:none;}
+.hero-inner{max-width:1140px;margin-inline:auto;padding-inline:1.5rem;position:relative;z-index:1;}
+.hero-2col{display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:center;}
+.hero-left{}
+.hero-tag{display:inline-flex;align-items:center;gap:.4rem;background:var(--grad-soft);border:1px solid var(--border);font-size:.72rem;font-weight:700;color:var(--purple);letter-spacing:.06em;text-transform:uppercase;padding:.3rem .9rem;border-radius:999px;margin-bottom:1.5rem;}
+.hero h1{font-size:clamp(1.8rem,1rem + 2.8vw,3rem);font-weight:900;line-height:1.13;margin-bottom:1.1rem;}
+.hero h1 span{background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
+.hero-lead{font-size:.98rem;color:var(--muted);line-height:1.8;margin-bottom:1.75rem;}
+.hero-pills{display:flex;flex-wrap:wrap;gap:.5rem;margin-bottom:1.75rem;}
+.pill{background:var(--surface2);border:1px solid var(--border);border-radius:999px;font-size:.77rem;font-weight:600;color:var(--muted);padding:.28rem .85rem;}
+.pill strong{color:var(--text);}
+.hero-btns{display:flex;gap:.75rem;flex-wrap:wrap;margin-bottom:1.75rem;}
+.btn-grad{display:inline-flex;align-items:center;gap:.4rem;background:var(--grad);color:#fff;font-size:.9rem;font-weight:700;padding:.9rem 2rem;border-radius:999px;box-shadow:0 4px 18px var(--pink-glow);transition:opacity .18s,transform .18s;}
+.btn-grad:hover{opacity:.9;transform:translateY(-1px);}
+.btn-outline{display:inline-flex;align-items:center;gap:.4rem;background:transparent;color:var(--pink);border:2px solid var(--pink);font-size:.85rem;font-weight:700;padding:.85rem 1.5rem;border-radius:999px;transition:background .18s;}
+.btn-outline:hover{background:var(--pink-lt);}
+.hero-author{display:inline-flex;align-items:center;gap:.85rem;padding:.9rem 1.1rem;background:var(--surface);border-radius:1rem;border:1px solid var(--border);box-shadow:var(--shadow-sm);}
+.author-avatar{width:44px;height:44px;border-radius:50%;background:var(--grad);display:flex;align-items:center;justify-content:center;color:#fff;font-size:1.2rem;font-weight:800;flex-shrink:0;}
+.author-name{font-weight:700;font-size:.92rem;}
+.author-desc{font-size:.75rem;color:var(--muted);}
+
+/* Hero right: stats cards */
+.hero-right{display:flex;flex-direction:column;gap:1rem;}
+.hero-stat-card{background:var(--surface);border:1px solid var(--border);border-radius:1.25rem;padding:1.25rem 1.5rem;box-shadow:var(--shadow-md);display:flex;align-items:center;gap:1.1rem;transition:transform .2s,box-shadow .2s;}
+.hero-stat-card:hover{transform:translateY(-2px);box-shadow:var(--shadow-lg);}
+.hsc-icon{width:52px;height:52px;border-radius:1rem;background:var(--grad);display:flex;align-items:center;justify-content:center;font-size:1.4rem;flex-shrink:0;}
+.hsc-val{font-size:1.3rem;font-weight:900;background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;line-height:1.1;}
+.hsc-label{font-size:.8rem;color:var(--muted);margin-top:.2rem;line-height:1.4;}
+.hero-cta-card{background:var(--grad);border-radius:1.25rem;padding:1.5rem;color:#fff;text-align:center;}
+.hero-cta-card p{font-size:.88rem;opacity:.9;line-height:1.6;margin-bottom:1rem;}
+.hero-cta-card h4{font-size:1.1rem;font-weight:800;margin-bottom:.5rem;}
+.btn-white{display:inline-flex;align-items:center;gap:.4rem;background:#fff;border-radius:999px;font-size:.85rem;font-weight:700;padding:.75rem 1.75rem;color:#c4167a;transition:opacity .18s,transform .18s;}
+.btn-white:hover{opacity:.92;transform:translateY(-1px);}
+
+/* INTRO */
+.intro{background:var(--grad);padding-block:clamp(1.75rem,4vw,3.5rem);}
+.intro-inner{max-width:1140px;margin-inline:auto;padding-inline:1.5rem;display:grid;grid-template-columns:1fr 1fr;gap:2rem;align-items:center;color:#fff;}
+.intro-left h2{font-size:clamp(1.3rem,1rem + 1.5vw,2rem);font-weight:800;line-height:1.25;margin-bottom:.5rem;}
+.intro-left p{font-size:.9rem;opacity:.9;line-height:1.75;}
+.intro-right{display:grid;grid-template-columns:1fr 1fr;gap:.75rem;}
+.intro-feat{background:rgba(255,255,255,.15);border-radius:.9rem;padding:.9rem;backdrop-filter:blur(4px);}
+.intro-feat .if-icon{font-size:1.4rem;margin-bottom:.4rem;}
+.intro-feat strong{font-size:.85rem;font-weight:700;display:block;margin-bottom:.2rem;}
+.intro-feat span{font-size:.77rem;opacity:.85;line-height:1.55;}
+
+/* SECTION */
+.section{padding-block:clamp(2.5rem,6vw,5rem);}
+.section-inner{max-width:1140px;margin-inline:auto;padding-inline:1.5rem;}
+.sec-label{font-size:.72rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--pink);margin-bottom:.5rem;}
+.sec-title{font-size:clamp(1.4rem,1rem + 1.6vw,2rem);font-weight:800;margin-bottom:.6rem;}
+.sec-sub{font-size:.92rem;color:var(--muted);max-width:60ch;line-height:1.8;margin-bottom:2.5rem;}
+
+/* COURSES GRID — 2 колонки */
+.courses-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;}
+
+/* COURSE CARD */
+.cc{background:var(--surface);border:1.5px solid var(--border);border-radius:1.5rem;overflow:hidden;box-shadow:var(--shadow-sm);display:flex;flex-direction:column;transition:box-shadow .2s,transform .2s;}
+.cc:hover{box-shadow:var(--shadow-lg);transform:translateY(-3px);}
+.cc-head{background:var(--grad);padding:1.5rem;color:#fff;position:relative;overflow:hidden;}
+.cc-head::after{content:'';position:absolute;right:-30px;top:-30px;width:120px;height:120px;border-radius:50%;background:rgba(255,255,255,.08);pointer-events:none;}
+.cc-badge{display:inline-block;background:rgba(255,255,255,.2);font-size:.65rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:.22rem .75rem;border-radius:999px;margin-bottom:.75rem;}
+.cc-head h3{font-size:clamp(.95rem,1rem + .6vw,1.25rem);font-weight:800;line-height:1.25;margin-bottom:.6rem;}
+.cc-head p{font-size:.82rem;opacity:.9;line-height:1.65;margin-bottom:1.1rem;}
+.cc-body{padding:1.25rem;flex:1;display:flex;flex-direction:column;gap:.7rem;}
+.cc-point{display:flex;align-items:flex-start;gap:.6rem;}
+.cc-icon{width:32px;height:32px;border-radius:.55rem;background:var(--grad-soft);display:flex;align-items:center;justify-content:center;font-size:.85rem;flex-shrink:0;}
+.cc-pt strong{display:block;font-size:.83rem;font-weight:700;margin-bottom:.12rem;}
+.cc-pt span{font-size:.77rem;color:var(--muted);line-height:1.55;}
+.cc-foot{padding:.9rem 1.25rem 1.25rem;border-top:1px solid var(--border);background:var(--surface2);display:flex;align-items:center;gap:.75rem;flex-wrap:wrap;margin-top:auto;}
+.btn-cc{display:inline-flex;align-items:center;gap:.35rem;background:var(--grad);color:#fff;font-size:.82rem;font-weight:700;padding:.7rem 1.5rem;border-radius:999px;box-shadow:0 3px 14px var(--pink-glow);transition:opacity .18s,transform .18s;white-space:nowrap;}
+.btn-cc:hover{opacity:.9;transform:translateY(-1px);}
+.badge-free{background:rgba(34,197,94,.15);color:#16a34a;font-size:.7rem;font-weight:700;padding:.22rem .7rem;border-radius:999px;white-space:nowrap;}
+[data-theme="dark"] .badge-free{background:rgba(74,222,128,.15);color:#4ade80;}
+
+/* PROGRAM inside card */
+.cc-program{display:grid;grid-template-columns:1fr 1fr;gap:.5rem;padding:1rem 1.25rem;border-top:1px solid var(--border);}
+.cc-prog-item{background:var(--surface2);border:1px solid var(--border);border-radius:.65rem;padding:.6rem .8rem;}
+.cc-prog-item .day{font-size:.6rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--pink);margin-bottom:.2rem;}
+.cc-prog-item strong{font-size:.78rem;display:block;margin-bottom:.1rem;}
+.cc-prog-item p{font-size:.72rem;color:var(--muted);line-height:1.5;}
+
+/* AUTHOR */
+.cc-author{padding:.85rem 1.25rem;border-top:1px solid var(--border);display:flex;align-items:center;gap:.75rem;}
+.ca-av{width:36px;height:36px;border-radius:50%;background:var(--grad);display:flex;align-items:center;justify-content:center;color:#fff;font-weight:800;font-size:.85rem;flex-shrink:0;}
+.ca-name{font-weight:700;font-size:.82rem;}
+.ca-desc{font-size:.72rem;color:var(--muted);line-height:1.4;}
+
+/* URGENCY STRIP */
+.urgency{background:linear-gradient(135deg,#ff6b35 0%,#e91e8c 100%);padding:.65rem 1.5rem;text-align:center;}
+.urgency p{font-size:.82rem;font-weight:700;color:#fff;letter-spacing:.02em;}
+
+/* CTA */
+.cta{background:var(--text);padding-block:clamp(3rem,7vw,5rem);text-align:center;position:relative;overflow:hidden;}
+.cta::before{content:'';position:absolute;top:-100px;left:50%;transform:translateX(-50%);width:600px;height:400px;border-radius:50%;background:radial-gradient(circle,rgba(233,30,140,.2) 0%,transparent 65%);}
+.cta-inner{max-width:680px;margin-inline:auto;padding-inline:1.5rem;position:relative;}
+.cta-label{font-size:.72rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--pink);margin-bottom:.75rem;}
+.cta h2{font-size:clamp(1.5rem,1rem + 2vw,2.5rem);font-weight:900;color:#fff;margin-bottom:1rem;}
+.cta p{font-size:.92rem;color:rgba(255,255,255,.7);line-height:1.85;margin-bottom:2rem;}
+
+/* TRUST */
+.trust{background:var(--surface2);border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding-block:clamp(1.5rem,3vw,2.5rem);}
+.trust-inner{max-width:1140px;margin-inline:auto;padding-inline:1.5rem;display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;text-align:center;}
+.trust-item .t-n{font-size:1.6rem;font-weight:900;background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
+.trust-item .t-l{font-size:.78rem;color:var(--muted);margin-top:.2rem;}
+
+footer{background:var(--surface);border-top:1px solid var(--border);padding-block:1.5rem;text-align:center;}
+footer p{font-size:.78rem;color:var(--faint);}
+
+.fade-up{opacity:0;transform:translateY(22px);transition:opacity .5s ease,transform .5s ease;}
+.fade-up.visible{opacity:1;transform:translateY(0);}
+
+@media(max-width:900px){.hero-2col{grid-template-columns:1fr;}.intro-inner{grid-template-columns:1fr;}.courses-grid{grid-template-columns:1fr;}.trust-inner{grid-template-columns:1fr 1fr;}}
+@media(max-width:540px){.trust-inner{grid-template-columns:1fr 1fr;}.cc-program{grid-template-columns:1fr;}.intro-right{grid-template-columns:1fr 1fr;}.hero-btns{flex-direction:column;align-items:flex-start;}}
+</style>
+</head>
+<body>
+
+<header>
+<div class="nav">
+  <div class="logo">Онлайн профессии ✦</div>
+  <div class="nav-right">
+    <div class="nav-badge">🔥 2026</div>
+    <button class="theme-btn" id="themeBtn" aria-label="Тема">🌙</button>
+  </div>
+</div>
+</header>
+
+<!-- URGENCY -->
+<div class="urgency">
+  <p>🚀 Большинство курсов ниже — полностью бесплатны. Начни прямо сейчас, не откладывая.</p>
+</div>
+
+<!-- HERO -->
+<section class="hero">
+<div class="hero-inner">
+  <div class="hero-2col">
+    <div class="hero-left">
+      <div class="hero-tag">✦ Онлайн-профессии · Работа из дома · 2026</div>
+      <h1>Ты заслуживаешь<br><span>зарабатывать больше</span> —<br>не выходя из дома</h1>
+      <p class="hero-lead">
+        Помнишь, как в последний раз думала: «Хорошо бы иметь доход, который не зависит от одного работодателя»?<br>
+        Это не мечта — это навык. Освоить его можно за дни, а не годы.<br>
+        11 проверенных направлений. Реальные люди уже зарабатывают от 50 000 до 200 000+ ₽ в месяц, сидя дома.
+      </p>
+      <div class="hero-pills">
+        <div class="pill">☕ <strong>Без офиса</strong> и дресс-кода</div>
+        <div class="pill">⏰ <strong>2–4 часа в день</strong></div>
+        <div class="pill">💸 Первые деньги — <strong>через 5–14 дней</strong></div>
+        <div class="pill">🤖 Нейросети делают <strong>80% за тебя</strong></div>
+        <div class="pill">📍 Из <strong>любой точки мира</strong></div>
+      </div>
+      <div class="hero-btns">
+        <a class="btn-grad" href="#" onclick="document.querySelector('.courses-grid').scrollIntoView({behavior:'smooth'});return false;">🎯 Смотреть все курсы</a>
+        <a class="btn-outline" href="#" onclick="document.querySelector('.cc').scrollIntoView({behavior:'smooth'});return false;">Начать бесплатно ↓</a>
+      </div>
+      <div class="hero-author">
+        <div class="author-avatar">С</div>
+        <div>
+          <div class="author-name">Анна Евдокимова</div>
+          <div class="author-desc">Перепробовала десятки схем — оставила только те, что дают результат</div>
+        </div>
+      </div>
+    </div>
+    <div class="hero-right">
+      <div class="hero-stat-card">
+        <div class="hsc-icon">💼</div>
+        <div><div class="hsc-val">11 направлений</div><div class="hsc-label">от YouTube до маркетплейсов — выбирай своё</div></div>
+      </div>
+      <div class="hero-stat-card">
+        <div class="hsc-icon">⚡</div>
+        <div><div class="hsc-val">5–14 дней</div><div class="hsc-label">до первых денег — у большинства учеников</div></div>
+      </div>
+      <div class="hero-stat-card">
+        <div class="hsc-icon">🆓</div>
+        <div><div class="hsc-val">0 ₽ вложений</div><div class="hsc-label">большинство курсов полностью бесплатны</div></div>
+      </div>
+      <div class="hero-stat-card">
+        <div class="hsc-icon">📈</div>
+        <div><div class="hsc-val">50К – 350К ₽</div><div class="hsc-label">реальный диапазон дохода учеников в месяц</div></div>
+      </div>
+      <div class="hero-cta-card">
+        <h4>Не знаешь с чего начать?</h4>
+        <p>Пролистай карточки ниже — каждая за 30 секунд расскажет что это за профессия и сколько можно заработать</p>
+        <a class="btn-white" href="#" onclick="document.querySelector('.courses-grid').scrollIntoView({behavior:'smooth'});return false;">Посмотреть все профессии ↓</a>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+
+<!-- INTRO -->
+<section class="intro">
+<div class="intro-inner">
+  <div class="intro-left">
+    <h2>Выбери своё направление и действуй</h2>
+    <p>Здесь нет воды и лишних слов. Только конкретные курсы с пошаговыми инструкциями. Читай, выбирай то, что отзывается, и кликай — каждая карточка ведёт прямо к обучению.</p>
+  </div>
+  <div class="intro-right">
+    <div class="intro-feat"><div class="if-icon">🎓</div><strong>Бесплатный старт</strong><span>Большинство курсов открыты без оплаты</span></div>
+    <div class="intro-feat"><div class="if-icon">🤖</div><strong>ИИ делает 80%</strong><span>Нейросети заменяют опыт и навыки</span></div>
+    <div class="intro-feat"><div class="if-icon">🏆</div><strong>Реальные результаты</strong><span>Только проверенные программы с отзывами</span></div>
+    <div class="intro-feat"><div class="if-icon">🌍</div><strong>Работа из любой точки</strong><span>Ноутбук + интернет = офис</span></div>
+  </div>
+</div>
+</section>
+
+<!-- TRUST -->
+<div class="trust">
+<div class="trust-inner">
+  <div class="trust-item"><div class="t-n">11</div><div class="t-l">онлайн-профессий</div></div>
+  <div class="trust-item"><div class="t-n">30 000+</div><div class="t-l">учеников прошли курсы</div></div>
+  <div class="trust-item"><div class="t-n">64%</div><div class="t-l">получили первые деньги до 14 дней</div></div>
+  <div class="trust-item"><div class="t-n">350К ₽</div><div class="t-l">максимальный доход учеников</div></div>
+</div>
+</div>
+
+<!-- COURSES -->
+<section class="section">
+<div class="section-inner">
+  <div class="sec-label">Все программы</div>
+  <h2 class="sec-title">11 способов начать зарабатывать онлайн</h2>
+  <p class="sec-sub">Каждая карточка — отдельное направление. Выбирай что ближе и переходи к обучению.</p>
+
+  <div class="courses-grid">
+
+    <!-- 1. YouTube -->
+    <div class="cc fade-up">
+      <div class="cc-head">
+        <div class="cc-badge">⭐ Хит · YouTube</div>
+        <h3>Вторая зарплата в $$$<br>на ведении YouTube каналов</h3>
+        <p>За 3 дня узнаешь как запустить прибыльный YouTube-канал без съёмок и зарабатывать 1000$+ в месяц, тратя 3 часа в неделю.</p>
+        <a class="btn-white" href="https://kursy-tut.ru/2743175?erid=2bL9aMPo2e4BA5qnNJQJV7gUjn" target="_blank" >Начать бесплатно →</a>
+      </div>
+      <div class="cc-body">
+        <div class="cc-point"><div class="cc-icon">🎬</div><div class="cc-pt"><strong>Без съёмок лица</strong><span>Канал работает на автоматизации и нейросетях</span></div></div>
+        <div class="cc-point"><div class="cc-icon">⏰</div><div class="cc-pt"><strong>3 часа в неделю</strong><span>Всё настраивается один раз и работает само</span></div></div>
+        <div class="cc-point"><div class="cc-icon">💰</div><div class="cc-pt"><strong>1000$+ в месяц</strong><span>Реальные результаты участников — через 30–60 дней</span></div></div>
+        <div class="cc-point"><div class="cc-icon">🚀</div><div class="cc-pt"><strong>Старт за 3 дня</strong><span>Пошаговая система без лишней воды</span></div></div>
+      </div>
+      <div class="cc-foot">
+        <a class="btn-cc" href="https://kursy-tut.ru/2743175?erid=2bL9aMPo2e4BA5qnNJQJV7gUjn" target="_blank" >🎬 Ютуб сила — Подробнее →</a>
+        <span class="badge-free">✅ Бесплатный вход</span>
+      </div>
+    </div>
+
+    <!-- 2. Яндекс Директ -->
+    <div class="cc fade-up">
+      <div class="cc-head">
+        <div class="cc-badge">📊 Фриланс · Яндекс Директ</div>
+        <h3>+100 000₽/мес<br>на настройке Яндекс рекламы</h3>
+        <p>После ухода Google — Яндекс монополист с 68% рекламного трафика. Специалисты нужны как никогда. Без опыта, 2–4 часа в день.</p>
+        <a class="btn-white" href="https://kursy-tut.ru/2502511?erid=2bL9aMPo2e4BA5qnNJPJGZwXJG" target="_blank" >Получить 4 урока бесплатно →</a>
+      </div>
+      <div class="cc-body">
+        <div class="cc-point"><div class="cc-icon">🆓</div><div class="cc-pt"><strong>4 урока — бесплатно</strong><span>Доступ сразу + чек-лист 9 топ онлайн-профессий</span></div></div>
+        <div class="cc-point"><div class="cc-icon">📅</div><div class="cc-pt"><strong>3-дневный курс + живой эфир</strong><span>День 1: профессия · День 2: кабинет Директ · День 3: первые заказы</span></div></div>
+        <div class="cc-point"><div class="cc-icon">🏆</div><div class="cc-pt"><strong>Автор: Елена Червонец</strong><span>17 лет экспертизы · публикации в PPC World · спикер конференций</span></div></div>
+        <div class="cc-point"><div class="cc-icon">📦</div><div class="cc-pt"><strong>Бонусы</strong><span>Сертификат · шаблоны рекламы · PDF «3 площадки для поиска работы»</span></div></div>
+      </div>
+      <div class="cc-program">
+        <div class="cc-prog-item"><div class="day">День 1</div><strong>Профессия и доход</strong><p>Карьерная лестница от 15К/нед до 200К/мес</p></div>
+        <div class="cc-prog-item"><div class="day">День 2</div><strong>Кабинет Директ</strong><p>Первая кампания — убедишься что справишься</p></div>
+        <div class="cc-prog-item"><div class="day">День 3</div><strong>Первые заказы</strong><p>3 способа найти работу новичку</p></div>
+        <div class="cc-prog-item"><div class="day">VIP эфир</div><strong>100% выход</strong><p>Схемы 1500 учеников + сертификат</p></div>
+      </div>
+      <div class="cc-foot">
+        <a class="btn-cc" href="https://kursy-tut.ru/2502511?erid=2bL9aMPo2e4BA5qnNJPJGZwXJG" target="_blank" >📊 Получить доступ бесплатно →</a>
+        <span class="badge-free">✅ Полностью бесплатно</span>
+      </div>
+    </div>
+
+    <!-- 3. Нейро-дизайнер -->
+    <div class="cc fade-up">
+      <div class="cc-head">
+        <div class="cc-badge">🎨 Нейросети · Новая профессия</div>
+        <h3>Нейро-Дизайнер с нуля —<br>от 150 000₽/мес</h3>
+        <p>Освой востребованную фриланс-профессию. Не умеешь рисовать? Не программировал? Всё что нужно — 40 минут и смартфон.</p>
+        <a class="btn-white" href="https://kursy-tut.ru/2502971?erid=2bL9aMPo2e4BA5qnNJPJGZxsgU" target="_blank" >Смотреть 1-й урок →</a>
+      </div>
+      <div class="cc-body">
+        <div class="cc-point"><div class="cc-icon">✏️</div><div class="cc-pt"><strong>Не нужно уметь рисовать</strong><span>ИИ создаёт визуалы за тебя — ты только направляешь</span></div></div>
+        <div class="cc-point"><div class="cc-icon">⚡</div><div class="cc-pt"><strong>Первый клиент — через 2 недели</strong><span>Практический курс сразу даёт инструменты для заказов</span></div></div>
+        <div class="cc-point"><div class="cc-icon">📱</div><div class="cc-pt"><strong>Только смартфон или ноутбук</strong><span>Никаких дорогих программ и оборудования</span></div></div>
+        <div class="cc-point"><div class="cc-icon">💼</div><div class="cc-pt"><strong>Фриланс без опыта</strong><span>Пошаговая система выхода на первые деньги без портфолио</span></div></div>
+      </div>
+      <div class="cc-foot">
+        <a class="btn-cc" href="https://kursy-tut.ru/2502971?erid=2bL9aMPo2e4BA5qnNJPJGZxsgU" target="_blank" >🎨 Начать в Telegram →</a>
+        <span class="badge-free">✅ Бесплатный курс</span>
+      </div>
+    </div>
+
+    <!-- 4. Stories -->
+    <div class="cc fade-up">
+      <div class="cc-head">
+        <div class="cc-badge">📱 Соцсети · Сторисмейкер</div>
+        <h3>«Вовлекающие Stories» —<br>профессия с пожизненным доступом</h3>
+        <p>45 HD-уроков, обратная связь по каждой работе, свободный график. Ведёт сторисмейкер с миллионными просмотрами. Стоимость: 3 590 ₽.</p>
+        <a class="btn-white" href="https://kursy-tut.ru/2743176?erid=2bL9aMPo2e4BA5qnNJQJV7gUjo" target="_blank" >Начать обучение →</a>
+      </div>
+      <div class="cc-body">
+        <div class="cc-point"><div class="cc-icon">🎓</div><div class="cc-pt"><strong>8 модулей · 45 уроков</strong><span>Быстрый старт → контент → бренд → сторителлинг → продажи</span></div></div>
+        <div class="cc-point"><div class="cc-icon">💬</div><div class="cc-pt"><strong>Обратная связь по каждой работе</strong><span>Преподаватель лично проверяет — это редкость в онлайн-обучении</span></div></div>
+        <div class="cc-point"><div class="cc-icon">♾️</div><div class="cc-pt"><strong>Пожизненный доступ</strong><span>Учись в своём темпе — материалы останутся навсегда</span></div></div>
+        <div class="cc-point"><div class="cc-icon">💰</div><div class="cc-pt"><strong>Модуль «Как зарабатывать»</strong><span>Первый клиент, продающее портфолио, прайс на услуги</span></div></div>
+      </div>
+      <div class="cc-author">
+        <div class="ca-av">Ю</div>
+        <div><div class="ca-name">Юлия Крылова</div><div class="ca-desc">Топовый сторисмейкер · 5+ лет работы с крупными блогерами</div></div>
+      </div>
+      <div class="cc-foot">
+        <a class="btn-cc" href="https://kursy-tut.ru/2743176?erid=2bL9aMPo2e4BA5qnNJQJV7gUjo" target="_blank" >📱 Начать обучение →</a>
+        <span style="font-size:.78rem;color:var(--muted);">💳 Рассрочка · Оплата из любой страны</span>
+      </div>
+    </div>
+
+    <!-- 5. Дизайн интерьера -->
+    <div class="cc fade-up">
+      <div class="cc-head">
+        <div class="cc-badge">🏠 Дизайн · Бесплатный интенсив</div>
+        <h3>Дизайнер интерьера с нуля —<br>до 200 000₽/мес</h3>
+        <p>Бесплатный 3-дневный практический интенсив от Geometrium School. Сделаешь планировку и мудборд прямо на интенсиве.</p>
+        <a class="btn-white" href="https://kursy-tut.ru/2743177?erid=2bL9aMPo2e4BA5qnNJQJV7gUjp" target="_blank" >Принять участие →</a>
+      </div>
+      <div class="cc-body">
+        <div class="cc-point"><div class="cc-icon">🎨</div><div class="cc-pt"><strong>Без опыта в рисовании</strong><span>Интенсив для тех, кто хочет реализовать творческий потенциал</span></div></div>
+        <div class="cc-point"><div class="cc-icon">🗺️</div><div class="cc-pt"><strong>Практика с первого урока</strong><span>Первая планировка и мудборд — прямо на интенсиве</span></div></div>
+        <div class="cc-point"><div class="cc-icon">🎁</div><div class="cc-pt"><strong>12 лекций в подарок</strong><span>Стили дизайна, цвет в интерьере, тренды 2026 — бесплатно</span></div></div>
+        <div class="cc-point"><div class="cc-icon">🔑</div><div class="cc-pt"><strong>Бонус: поток клиентов</strong><span>4-й урок — как найти клиентов без вложений денег</span></div></div>
+      </div>
+      <div class="cc-author">
+        <div class="ca-av">П</div>
+        <div><div class="ca-name">Павел Герасимов</div><div class="ca-desc">Сооснователь Geometrium · 10+ лет в дизайне · Спикер НТВ и ТНТ</div></div>
+      </div>
+      <div class="cc-foot">
+        <a class="btn-cc" href="https://kursy-tut.ru/2743177?erid=2bL9aMPo2e4BA5qnNJQJV7gUjp" target="_blank" >🏠 Записаться бесплатно →</a>
+        <span class="badge-free">✅ Бесплатный интенсив</span>
+      </div>
+    </div>
+
+    <!-- 6. Telegram -->
+    <div class="cc fade-up">
+      <div class="cc-head">
+        <div class="cc-badge">✈️ Telegram · Золотая жила 2026</div>
+        <h3>ТОП-4 способа заработка<br>от 80 000₽/мес в Telegram</h3>
+        <p>В 2026 году Telegram — один из лучших вариантов заработка. Средний доход 80–350К ₽. Уже через 3 дня можно начинать.</p>
+        <a class="btn-white" href="https://kursy-tut.ru/2503164?erid=2bL9aMPo2e4BA5qnNJPJGbQB31" target="_blank" >Идти на бесплатный курс →</a>
+      </div>
+      <div class="cc-body">
+        <div class="cc-point"><div class="cc-icon">📈</div><div class="cc-pt"><strong>80 000 — 350 000₽/мес</strong><span>Реальный диапазон дохода — растёт вместе с аудиторией</span></div></div>
+        <div class="cc-point"><div class="cc-icon">📅</div><div class="cc-pt"><strong>3 дня до первых денег</strong><span>День 1: основы · День 2: первый доход · День 3: получение заказчиков</span></div></div>
+        <div class="cc-point"><div class="cc-icon">🕐</div><div class="cc-pt"><strong>2–3 часа в день</strong><span>Гибкий график, полная независимость</span></div></div>
+        <div class="cc-point"><div class="cc-icon">👨‍🏫</div><div class="cc-pt"><strong>Автор: Артём Мазур</strong><span>Обучил 100 000+ участников · 64% получали деньги через 5–14 дней</span></div></div>
+      </div>
+      <div class="cc-foot">
+        <a class="btn-cc" href="https://kursy-tut.ru/2503164?erid=2bL9aMPo2e4BA5qnNJPJGbQB31" target="_blank" >✈️ Хочу зарабатывать в Telegram →</a>
+        <span class="badge-free">✅ Бесплатный 3-дневный курс</span>
+      </div>
+    </div>
+
+    <!-- 7. Нейрокреатор -->
+    <div class="cc fade-up">
+      <div class="cc-head">
+        <div class="cc-badge">🤖 Нейросети · Практикум</div>
+        <h3>Нейрокреатор 4.0 —<br>новый уровень творчества и дохода</h3>
+        <p>Бесплатный онлайн-практикум. Портретные нейрофотосессии, анимация, короткие видео. Работа без VPN через NAVA-app.</p>
+        <a class="btn-white" href="https://kursy-tut.ru/2743178?erid=2bL9aMPo2e4BA5qnNJQJV7gUjq" target="_blank" >Я буду на практикуме →</a>
+      </div>
+      <div class="cc-body">
+        <div class="cc-point"><div class="cc-icon">📸</div><div class="cc-pt"><strong>Нейрофотосессии</strong><span>Без фотографа, без студии, без дорогого оборудования</span></div></div>
+        <div class="cc-point"><div class="cc-icon">🎥</div><div class="cc-pt"><strong>Анимация и видео</strong><span>От идеи до коротких видео + анимация на нейрофотографии</span></div></div>
+        <div class="cc-point"><div class="cc-icon">🌐</div><div class="cc-pt"><strong>Без VPN через NAVA-app</strong><span>ChatGPT, Midjourney, Flux, Kling, VEO без ограничений</span></div></div>
+        <div class="cc-point"><div class="cc-icon">💼</div><div class="cc-pt"><strong>Все способы монетизации</strong><span>Подробный разбор заработка на нейровизуале</span></div></div>
+      </div>
+      <div class="cc-author">
+        <div class="ca-av">В</div>
+        <div><div class="ca-name">Владимир Повшенко</div><div class="ca-desc">Издатель «Российское фото» · Ректор Международной Нейроакадемии · 750+ студентов</div></div>
+      </div>
+      <div class="cc-foot">
+        <a class="btn-cc" href="https://kursy-tut.ru/2743178?erid=2bL9aMPo2e4BA5qnNJQJV7gUjq" target="_blank" >🤖 Записаться на практикум →</a>
+        <span class="badge-free">✅ Бесплатный практикум</span>
+      </div>
+    </div>
+
+    <!-- 8. Реклама + ИИ -->
+    <div class="cc fade-up">
+      <div class="cc-head">
+        <div class="cc-badge">💡 Реклама · 4-дневный интенсив</div>
+        <h3>Заработок на интернет-рекламе<br>с помощью нейросетей</h3>
+        <p>Бесплатный 4-дневный интенсив. Нейросети берут 80% рутины. Первые деньги возможны к 3-му дню. 7000+ отзывов студентов.</p>
+        <a class="btn-white" href="https://kursy-tut.ru/2503203?erid=2bL9aMPo2e4BA5qnNJPJGbQW4S" target="_blank" >Принять участие бесплатно →</a>
+      </div>
+      <div class="cc-body">
+        <div class="cc-point"><div class="cc-icon">🎁</div><div class="cc-pt"><strong>Бонусы при регистрации</strong><span>Рабочая тетрадь «Стратегия от 70К» + PDF «ТОП-3 нейросети для рекламы»</span></div></div>
+        <div class="cc-point"><div class="cc-icon">💸</div><div class="cc-pt"><strong>30 — 300 000₽/мес</strong><span>Новички — от 30–50К, через год — 100–200К, опытные — 300К+</span></div></div>
+        <div class="cc-point"><div class="cc-icon">🤖</div><div class="cc-pt"><strong>ИИ делает 80% за тебя</strong><span>ChatGPT, GigaChat, Leonardo пишут тексты и анализируют ЦА</span></div></div>
+      </div>
+      <div class="cc-program">
+        <div class="cc-prog-item"><div class="day">День 1</div><strong>Стратегия заработка</strong><p>Возможности рекламы+нейросетей</p></div>
+        <div class="cc-prog-item"><div class="day">День 2</div><strong>Настройка с ИИ</strong><p>Первая кампания с нуля</p></div>
+        <div class="cc-prog-item"><div class="day">День 3</div><strong>Поиск клиентов</strong><p>5 ошибок + 3 способа найти первого</p></div>
+        <div class="cc-prog-item"><div class="day">VIP</div><strong>300К+/мес</strong><p>Стратегия + именной сертификат</p></div>
+      </div>
+      <div class="cc-author">
+        <div class="ca-av">Е</div>
+        <div><div class="ca-name">Евгений Андрианов</div><div class="ca-desc">Практик с 2013 · 150 млн₽ рекламных бюджетов</div></div>
+      </div>
+      <div class="cc-foot">
+        <a class="btn-cc" href="https://kursy-tut.ru/2503203?erid=2bL9aMPo2e4BA5qnNJPJGbQW4S" target="_blank" >💡 Зарегистрироваться бесплатно →</a>
+        <span class="badge-free">✅ Бесплатно · далее 5 000₽</span>
+      </div>
+    </div>
+
+    <!-- 9. Дизайн за 30 дней -->
+    <div class="cc fade-up">
+      <div class="cc-head">
+        <div class="cc-badge">✏️ Дизайн · 30 минут вебинар</div>
+        <h3>Как начать зарабатывать<br>на дизайне за 30 дней</h3>
+        <p>30-минутный вебинар «Проверенный план». Инфографика для маркетплейсов — заработок без вложений в товар. Реальные заказы уже во время обучения.</p>
+        <a class="btn-white" href="https://kursy-tut.ru/2743172?erid=2bL9aMPo2e4BA5qnNJQJV7gUjj" target="_blank" >Let's Go! Записаться →</a>
+      </div>
+      <div class="cc-body">
+        <div class="cc-point"><div class="cc-icon">🧮</div><div class="cc-pt"><strong>Калькулятор дохода</strong><span>Сразу после регистрации — рассчитай будущий доход за 1 минуту</span></div></div>
+        <div class="cc-point"><div class="cc-icon">🛒</div><div class="cc-pt"><strong>Без поиска клиентов</strong><span>Работа с маркетплейсами — заказы приходят сами</span></div></div>
+        <div class="cc-point"><div class="cc-icon">🆓</div><div class="cc-pt"><strong>Бесплатные программы</strong><span>Никаких платных инструментов на старте</span></div></div>
+        <div class="cc-point"><div class="cc-icon">👨‍🏫</div><div class="cc-pt"><strong>Автор: Бек Файв</strong><span>20+ лет экспертизы · 16 000+ учеников</span></div></div>
+      </div>
+      <div class="cc-foot">
+        <a class="btn-cc" href="https://kursy-tut.ru/2743172?erid=2bL9aMPo2e4BA5qnNJQJV7gUjj" target="_blank" >✏️ Записаться на вебинар →</a>
+        <span class="badge-free">✅ Бесплатный 30-мин вебинар</span>
+      </div>
+    </div>
+
+    <!-- 10. Маркетплейсы -->
+    <div class="cc fade-up">
+      <div class="cc-head">
+        <div class="cc-badge">🛒 Маркетплейсы · Мастер-класс</div>
+        <h3>Маркетплейсы 2026 —<br>от 200 000₽ с нуля</h3>
+        <p>Бесплатный 2-часовой мастер-класс от практика с оборотом 50 млн₽/год. Товары, поставщики, масштабирование. 525+ уже записались.</p>
+        <a class="btn-white" href="https://kursy-tut.ru/2503277?erid=2bL9aMPo2e4BA5qnNJPJGbQWbQ" target="_blank" >Зарегистрироваться →</a>
+      </div>
+      <div class="cc-body">
+        <div class="cc-point"><div class="cc-icon">🎁</div><div class="cc-pt"><strong>Подарки после регистрации</strong><span>Чек-лист топ-карточек + 8 шагов для запуска + ТОП-5 кейсов</span></div></div>
+        <div class="cc-point"><div class="cc-icon">📦</div><div class="cc-pt"><strong>2 часа концентрата</strong><span>Wildberries · Ozon · AliExpress — товары, поставщики, первая поставка</span></div></div>
+        <div class="cc-point"><div class="cc-icon">📊</div><div class="cc-pt"><strong>500 000₽ в первый месяц</strong><span>Личный результат спикера на 2-х товарах</span></div></div>
+      </div>
+      <div class="cc-author">
+        <div class="ca-av">А</div>
+        <div><div class="ca-name">Александр Федяев</div><div class="ca-desc">Селлер с 2013 · Оборот 50 млн₽/год · 20 000+ учеников · 500+ отзывов</div></div>
+      </div>
+      <div class="cc-foot">
+        <a class="btn-cc" href="https://kursy-tut.ru/2503277?erid=2bL9aMPo2e4BA5qnNJPJGbQWbQ" target="_blank" >🛒 Попасть на мастер-класс →</a>
+        <span class="badge-free">✅ Бесплатный мастер-класс</span>
+      </div>
+    </div>
+
+    <!-- 11. Нейросети второй доход -->
+    <div class="cc fade-up">
+      <div class="cc-head">
+        <div class="cc-badge">⚡ Нейросети · 4-дневный практикум</div>
+        <h3>Второй доход за 2 часа в день<br>на нейросетях</h3>
+        <p>Для тех, кто устал от переработок. 4 дня, без программирования, без вложений. Бонус сразу: «7 способов заработка на ИИ с готовыми промптами».</p>
+        <a class="btn-white" href="https://kursy-tut.ru/2743180?erid=2bL9aMPo2e4BA5qnNJQJV7gUp7" target="_blank" >Принять участие →</a>
+      </div>
+      <div class="cc-body">
+        <div class="cc-point"><div class="cc-icon">💸</div><div class="cc-pt"><strong>На чём зарабатывать с ИИ</strong><span>Чат-боты от 90К · дизайн от 80К · копирайтинг от 60К/мес</span></div></div>
+        <div class="cc-point"><div class="cc-icon">📅</div><div class="cc-pt"><strong>4 дня · от выгорания к свободе</strong><span>День 1: 50% рутины нейросетям · День 2: доход без увольнения</span></div></div>
+        <div class="cc-point"><div class="cc-icon">🤖</div><div class="cc-pt"><strong>ChatGPT без VPN · бесплатно</strong><span>Получишь доступ к ChatGPT без VPN прямо на первом уроке</span></div></div>
+        <div class="cc-point"><div class="cc-icon">🏆</div><div class="cc-pt"><strong>Сертификат после курса</strong><span>С сертификатом намного легче найти первого клиента</span></div></div>
+      </div>
+      <div class="cc-foot">
+        <a class="btn-cc" href="https://kursy-tut.ru/2743180?erid=2bL9aMPo2e4BA5qnNJQJV7gUp7" target="_blank" >⚡ Принять участие бесплатно →</a>
+        <span class="badge-free">✅ Бесплатный практикум</span>
+      </div>
+    </div>
+
+    <!-- 12. Нейросети работают -->
+    <div class="cc fade-up">
+      <div class="cc-head">
+        <div class="cc-badge">🧠 Нейросети · 3-дневный интенсив</div>
+        <h3>Заставь нейросети работать<br>за тебя каждый день</h3>
+        <p>Бесплатный 3-дневный интенсив. Простой план: как без опыта стабильно находить выгодные заказы и выполнять их с нейросетями. Помог 30 000+ людям.</p>
+        <a class="btn-white" href="https://kursy-tut.ru/2743181?erid=2bL9aMPo2e4BA5qnNJQJV7gUp8" target="_blank" >Записаться на интенсив →</a>
+      </div>
+      <div class="cc-body">
+        <div class="cc-point"><div class="cc-icon">📝</div><div class="cc-pt"><strong>Услуги без навыков</strong><span>Статьи · сценарии · контент-планы · бизнес-анализ — всё делают нейросети</span></div></div>
+        <div class="cc-point"><div class="cc-icon">📅</div><div class="cc-pt"><strong>День 2: зарабатываем 5 000₽ в эфире</strong><span>Живая практика — видишь результат ещё во время обучения</span></div></div>
+        <div class="cc-point"><div class="cc-icon">👥</div><div class="cc-pt"><strong>Для любого возраста</strong><span>70-летние, мамы с детьми, офисные работники — получилось у всех</span></div></div>
+      </div>
+      <div class="cc-author">
+        <div class="ca-av">Е</div>
+        <div><div class="ca-name">Евгений Андрианов</div><div class="ca-desc">С 2008 работает в интернете · Помог 30 000+ людям зарабатывать онлайн</div></div>
+      </div>
+      <div class="cc-foot">
+        <a class="btn-cc" href="https://kursy-tut.ru/2743181?erid=2bL9aMPo2e4BA5qnNJQJV7gUp8" target="_blank" >🧠 Записаться бесплатно →</a>
+        <span class="badge-free">✅ Бесплатный интенсив · 3 дня</span>
+      </div>
+    </div>
+
+  </div>
+</div>
+</section>
+
+<!-- CTA -->
+<section class="cta">
+<div class="cta-inner">
+  <div class="cta-label">✦ Ты уже на правильной странице</div>
+  <h2>Всё начинается с одного клика</h2>
+  <p>Каждый из этих курсов — реальный первый шаг к доходу без офиса, начальника и графика 9 до 18. Выбери то, что откликнулось, и действуй прямо сейчас.</p>
+  <a class="btn-grad" style="font-size:.95rem;padding:1rem 2.4rem;" href="#" onclick="document.querySelector('.courses-grid').scrollIntoView({behavior:'smooth'});return false;">Выбрать профессию ↑</a>
+</div>
+</section>
+
+<footer>
+  <p>© 2026 Онлайн профессии · Все материалы носят информационный характер</p>
+</footer>
+
+<script>
+var btn=document.getElementById('themeBtn');
+var html=document.documentElement;
+var saved=localStorage.getItem('op-theme')||'light';
+html.setAttribute('data-theme',saved);
+btn.textContent=saved==='dark'?'☀️':'🌙';
+btn.addEventListener('click',function(){
+  var t=html.getAttribute('data-theme')==='dark'?'light':'dark';
+  html.setAttribute('data-theme',t);
+  localStorage.setItem('op-theme',t);
+  btn.textContent=t==='dark'?'☀️':'🌙';
+});
+var obs=new IntersectionObserver(function(e){e.forEach(function(i){if(i.isIntersecting)i.target.classList.add('visible');});},{threshold:0.05});
+document.querySelectorAll('.fade-up').forEach(function(el){obs.observe(el);});
+</script>
+</body>
+</html>
