@@ -64,10 +64,10 @@
       <div class="global-top-menu-title">Онлайн профессии</div>
 
       <div class="global-top-menu-links">
-        <a href="index.html">Главная</a>
-        <a href="site.html">Свой сайт за 30 минут</a>
-        <a href="crypto.html">Криптовалюта</a>
-        <a href="eco.html">Экономия</a>
+        <a href="/">Главная</a>
+        <a href="/site/">Свой сайт за 30 минут</a>
+        <a href="/crypto/">Криптовалюта</a>
+        <a href="/eco/">Экономия</a>
       </div>
     </nav>
   `);
