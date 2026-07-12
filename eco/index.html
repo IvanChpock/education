@@ -1,1 +1,467 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Как экономить на покупках — реальные схемы | onlinedu365</title>
+<meta name="description" content="Кешбэк, промокоды, скидки на доставку еды до 50%, банковские карты с приветственными бонусами. Реальные схемы экономии, которые работают в 2026.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;-webkit-font-smoothing:antialiased;}
 
+[data-theme="light"]{
+  --accent:#22c55e;--accent-h:#16a34a;--accent-lt:rgba(34,197,94,.1);--accent-glow:rgba(34,197,94,.18);
+  --amber:#f59e0b;--amber-lt:rgba(245,158,11,.1);
+  --grad:linear-gradient(135deg,#22c55e 0%,#16a34a 100%);
+  --grad-warm:linear-gradient(135deg,#f59e0b 0%,#ef4444 100%);
+  --text:#0a0f0c;--muted:#4b6358;--faint:#9ab0a4;
+  --bg:#f6faf7;--surface:#fff;--surface2:#eef5f0;--border:#d4e8da;
+  --shadow-sm:0 2px 8px rgba(34,197,94,.08);
+  --shadow-md:0 8px 28px rgba(34,197,94,.13);
+  --shadow-lg:0 20px 60px rgba(34,197,94,.17);
+}
+[data-theme="dark"]{
+  --accent:#4ade80;--accent-h:#22c55e;--accent-lt:rgba(74,222,128,.1);--accent-glow:rgba(74,222,128,.18);
+  --amber:#fbbf24;--amber-lt:rgba(251,191,36,.1);
+  --grad:linear-gradient(135deg,#4ade80 0%,#22c55e 100%);
+  --grad-warm:linear-gradient(135deg,#fbbf24 0%,#f87171 100%);
+  --text:#e8f5ec;--muted:#7da890;--faint:#4a6856;
+  --bg:#080e0a;--surface:#0f1a12;--surface2:#152019;--border:#1e3325;
+  --shadow-sm:0 2px 8px rgba(0,0,0,.3);
+  --shadow-md:0 8px 28px rgba(0,0,0,.4);
+  --shadow-lg:0 20px 60px rgba(0,0,0,.5);
+}
+
+body{font-family:'Inter',sans-serif;color:var(--text);background:var(--bg);line-height:1.65;transition:background .3s,color .3s;}
+a{text-decoration:none;color:inherit;}
+.w{max-width:1000px;margin-inline:auto;padding-inline:1.5rem;}
+
+header{background:var(--surface);border-bottom:1px solid var(--border);padding-block:.85rem;position:sticky;top:0;z-index:100;transition:background .3s;}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:1rem;}
+.logo{font-size:1rem;font-weight:800;background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;white-space:nowrap;}
+.theme-btn{width:38px;height:38px;border-radius:50%;background:var(--surface2);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;font-size:1rem;cursor:pointer;flex-shrink:0;}
+
+.hero{background:var(--surface);border-bottom:1px solid var(--border);padding-block:clamp(3rem,8vw,6rem);position:relative;overflow:hidden;}
+.hero::before{content:'';position:absolute;right:-120px;top:-120px;width:480px;height:480px;border-radius:50%;background:radial-gradient(circle,var(--accent-glow) 0%,transparent 65%);pointer-events:none;}
+.hero-inner{position:relative;z-index:1;}
+.hero-tag{display:inline-flex;align-items:center;gap:.4rem;background:var(--accent-lt);border:1px solid rgba(34,197,94,.2);font-size:.72rem;font-weight:700;color:var(--accent-h);letter-spacing:.08em;text-transform:uppercase;padding:.3rem .9rem;border-radius:999px;margin-bottom:1.5rem;}
+[data-theme="dark"] .hero-tag{color:var(--accent);}
+.hero h1{font-size:clamp(1.9rem,1rem + 3.2vw,3.4rem);font-weight:900;line-height:1.12;margin-bottom:1.2rem;}
+.hero h1 em{font-style:normal;background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
+.hero-lead{font-size:1.02rem;color:var(--muted);line-height:1.85;max-width:58ch;margin-bottom:2rem;}
+.hero-chips{display:flex;flex-wrap:wrap;gap:.6rem;margin-bottom:2.5rem;}
+.chip{background:var(--surface2);border:1px solid var(--border);border-radius:999px;font-size:.8rem;font-weight:600;color:var(--muted);padding:.35rem 1rem;}
+.chip strong{color:var(--text);}
+.hero-btns{display:flex;gap:.9rem;flex-wrap:wrap;}
+.btn-main{display:inline-flex;align-items:center;gap:.4rem;background:var(--grad);color:#fff;font-size:.9rem;font-weight:700;padding:.9rem 2rem;border-radius:999px;box-shadow:0 6px 24px var(--accent-glow);transition:opacity .18s,transform .18s;}
+.btn-main:hover{opacity:.9;transform:translateY(-1px);}
+.btn-ghost{display:inline-flex;align-items:center;gap:.4rem;background:transparent;color:var(--text);font-size:.88rem;font-weight:600;padding:.85rem 1.5rem;border-radius:999px;border:1.5px solid var(--border);cursor:pointer;transition:border-color .18s,color .18s;}
+.btn-ghost:hover{border-color:var(--accent);color:var(--accent-h);}
+[data-theme="dark"] .btn-ghost:hover{color:var(--accent);}
+
+.section{padding-block:clamp(2.5rem,6vw,5rem);}
+.section.alt{background:var(--surface2);border-top:1px solid var(--border);border-bottom:1px solid var(--border);}
+.sec-label{font-size:.7rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--accent-h);margin-bottom:.5rem;}
+[data-theme="dark"] .sec-label{color:var(--accent);}
+.sec-h{font-size:clamp(1.4rem,1rem + 1.8vw,2.1rem);font-weight:800;margin-bottom:.6rem;}
+.sec-sub{font-size:.92rem;color:var(--muted);max-width:55ch;line-height:1.8;margin-bottom:2rem;}
+
+/* GRAB */
+.grab-card{background:var(--surface);border:2px solid var(--accent);border-radius:1.5rem;overflow:hidden;box-shadow:var(--shadow-lg);}
+.grab-top{background:var(--grad);padding:2rem;display:grid;grid-template-columns:1fr auto;align-items:center;gap:1.5rem;}
+.grab-top h3{font-size:clamp(1.1rem,1rem + 1vw,1.5rem);font-weight:800;color:#fff;margin-bottom:.4rem;}
+.grab-top p{font-size:.88rem;color:rgba(255,255,255,.88);line-height:1.7;}
+.grab-big{font-size:3rem;flex-shrink:0;}
+.grab-body{padding:1.75rem;display:grid;grid-template-columns:1fr 1fr;gap:1rem;}
+.grab-feat{display:flex;align-items:flex-start;gap:.65rem;}
+.gf-icon{width:36px;height:36px;border-radius:.75rem;background:var(--accent-lt);display:flex;align-items:center;justify-content:center;font-size:1rem;flex-shrink:0;}
+.gf-t{font-size:.88rem;font-weight:700;margin-bottom:.2rem;}
+.gf-d{font-size:.8rem;color:var(--muted);line-height:1.65;}
+.grab-footer{padding:1.25rem 1.75rem;background:var(--surface2);border-top:1px solid var(--border);display:flex;align-items:center;gap:1rem;flex-wrap:wrap;}
+
+/* FOOD */
+.food-card{background:var(--surface);border:1px solid var(--border);border-radius:1.5rem;overflow:hidden;box-shadow:var(--shadow-md);}
+.food-head{background:var(--grad-warm);padding:1.75rem;display:flex;align-items:center;gap:1.25rem;}
+.food-head h3{font-size:clamp(1.05rem,1rem + .8vw,1.35rem);font-weight:800;color:#fff;margin-bottom:.3rem;}
+.food-head p{font-size:.85rem;color:rgba(255,255,255,.88);line-height:1.6;}
+.food-icon{font-size:2.8rem;flex-shrink:0;}
+.food-body{padding:1.75rem;}
+.food-steps{display:flex;flex-direction:column;gap:.85rem;margin-bottom:1.5rem;}
+.food-step{display:flex;align-items:flex-start;gap:.85rem;}
+.fs-n{width:30px;height:30px;border-radius:50%;background:var(--grad-warm);color:#fff;font-size:.82rem;font-weight:800;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:.1rem;}
+.fs-text strong{font-size:.9rem;font-weight:700;display:block;margin-bottom:.15rem;}
+.fs-text span{font-size:.82rem;color:var(--muted);line-height:1.65;}
+.food-services{display:flex;flex-wrap:wrap;gap:.5rem;margin-bottom:1.5rem;}
+.svc-tag{background:var(--surface2);border:1px solid var(--border);border-radius:.5rem;font-size:.75rem;font-weight:600;color:var(--muted);padding:.25rem .7rem;}
+.calc-box{background:var(--amber-lt);border:1px solid rgba(245,158,11,.25);border-radius:1rem;padding:1.25rem;display:grid;grid-template-columns:repeat(3,1fr);gap:.75rem;text-align:center;}
+[data-theme="dark"] .calc-box{background:rgba(251,191,36,.08);border-color:rgba(251,191,36,.2);}
+.calc-val{font-size:1.25rem;font-weight:800;color:var(--amber);}
+.calc-l{font-size:.72rem;color:var(--muted);margin-top:.2rem;}
+
+/* TIPS */
+.tips-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.1rem;margin-top:2rem;}
+.tip-card{background:var(--surface);border:1px solid var(--border);border-radius:1.1rem;padding:1.35rem;box-shadow:var(--shadow-sm);}
+.tip-icon{font-size:1.6rem;margin-bottom:.6rem;}
+.tip-t{font-size:.9rem;font-weight:700;margin-bottom:.35rem;}
+.tip-card p{font-size:.82rem;color:var(--muted);line-height:1.7;}
+
+/* BANKS */
+.banks-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.25rem;margin-top:2rem;}
+.bank-card{background:var(--surface);border:1px solid var(--border);border-radius:1.4rem;overflow:hidden;box-shadow:var(--shadow-sm);transition:box-shadow .2s,transform .2s;display:flex;flex-direction:column;}
+.bank-card:hover{box-shadow:var(--shadow-lg);transform:translateY(-3px);}
+.bank-head{padding:1.35rem 1.35rem .9rem;display:flex;align-items:center;gap:.85rem;}
+.bank-logo{width:46px;height:46px;border-radius:.9rem;display:flex;align-items:center;justify-content:center;font-weight:900;color:#fff;font-size:.9rem;flex-shrink:0;}
+.bl-tbank{background:linear-gradient(135deg,#ffdd2d 0%,#f9a820 100%);}
+.bl-alfa{background:linear-gradient(135deg,#ef3124 0%,#b91c1c 100%);}
+.bl-ozon{background:linear-gradient(135deg,#005bff 0%,#0033cc 100%);}
+.bl-yandex{background:linear-gradient(135deg,#fc3f1d 0%,#e8190a 100%);}
+.bl-vtb{background:linear-gradient(135deg,#009fdf 0%,#006fa6 100%);}
+.bl-bcs{background:linear-gradient(135deg,#0056a0 0%,#003d75 100%);}
+.bl-gpb{background:linear-gradient(135deg,#4e2780 0%,#311560 100%);}
+.bl-rshb{background:linear-gradient(135deg,#1d8348 0%,#0e4d2a 100%);}
+.bank-name{font-size:1rem;font-weight:800;}
+.bank-type{font-size:.7rem;color:var(--muted);margin-top:.1rem;}
+.bank-body{padding:0 1.35rem;flex:1;}
+.bonus-pill{display:inline-flex;align-items:center;gap:.3rem;background:rgba(34,197,94,.12);border:1px solid rgba(34,197,94,.2);color:var(--accent-h);font-size:.72rem;font-weight:700;padding:.22rem .75rem;border-radius:999px;margin-bottom:.9rem;}
+[data-theme="dark"] .bonus-pill{color:var(--accent);}
+.bank-feats{display:flex;flex-direction:column;gap:.5rem;margin-bottom:1rem;}
+.bf{display:flex;align-items:flex-start;gap:.5rem;font-size:.82rem;color:var(--muted);line-height:1.6;}
+.bf-ic{flex-shrink:0;margin-top:.05rem;}
+.bf strong{color:var(--text);font-weight:600;}
+.bank-foot{padding:.9rem 1.35rem 1.35rem;margin-top:auto;}
+.btn-bank{display:flex;align-items:center;justify-content:center;gap:.3rem;padding:.75rem 1rem;border-radius:999px;font-size:.82rem;font-weight:700;color:#fff;width:100%;transition:opacity .18s,transform .18s;}
+.btn-bank:hover{opacity:.9;transform:translateY(-1px);}
+.btn-tbank{background:linear-gradient(135deg,#ffdd2d 0%,#f9a820 100%);color:#1a1000;}
+.btn-alfa{background:linear-gradient(135deg,#ef3124 0%,#b91c1c 100%);}
+.btn-ozon{background:linear-gradient(135deg,#005bff 0%,#0033cc 100%);}
+.btn-yandex{background:linear-gradient(135deg,#fc3f1d 0%,#e8190a 100%);}
+.btn-vtb{background:linear-gradient(135deg,#009fdf 0%,#006fa6 100%);}
+.btn-bcs{background:linear-gradient(135deg,#0056a0 0%,#003d75 100%);}
+.btn-gpb{background:linear-gradient(135deg,#4e2780 0%,#311560 100%);}
+.btn-rshb{background:linear-gradient(135deg,#1d8348 0%,#0e4d2a 100%);}
+
+.lh-box{background:var(--grad);border-radius:1.25rem;padding:1.75rem;margin-top:2rem;color:#fff;}
+.lh-box h4{font-size:1rem;font-weight:800;margin-bottom:.75rem;display:flex;align-items:center;gap:.5rem;}
+.lh-box p{font-size:.88rem;line-height:1.8;opacity:.92;}
+.lh-box strong{opacity:1;font-weight:700;}
+
+.conclusion{background:var(--surface);border:1px solid var(--border);border-radius:1.25rem;padding:2rem;text-align:center;box-shadow:var(--shadow-sm);}
+.conclusion .icon{font-size:2.5rem;margin-bottom:.75rem;}
+.conclusion h3{font-size:1.1rem;font-weight:800;margin-bottom:.75rem;}
+.conclusion p{font-size:.9rem;color:var(--muted);line-height:1.8;max-width:52ch;margin-inline:auto;}
+
+footer{background:var(--surface);border-top:1px solid var(--border);padding-block:1.5rem;text-align:center;}
+footer p{font-size:.78rem;color:var(--faint);}
+
+.fade-up{opacity:0;transform:translateY(18px);transition:opacity .5s ease,transform .5s ease;}
+.fade-up.visible{opacity:1;transform:translateY(0);}
+
+@media(max-width:768px){.grab-body{grid-template-columns:1fr;}.banks-grid{grid-template-columns:1fr;}.tips-grid{grid-template-columns:1fr 1fr;}.grab-top{grid-template-columns:1fr;}.grab-big{display:none;}.calc-box{grid-template-columns:1fr 1fr;}}
+@media(max-width:480px){.tips-grid{grid-template-columns:1fr;}.hero-btns{flex-direction:column;align-items:flex-start;}}
+</style>
+</head>
+<body>
+<script src="menu.js"></script>
+  
+<header>
+  <div class="nav w">
+    <a class="logo" href="https://sites.google.com/view/onlinedu365/menu">💰 onlinedu365 · Экономия</a>
+    <button class="theme-btn" id="themeBtn" aria-label="Тема">🌙</button>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="w hero-inner">
+    <div class="hero-tag">💡 Реальные схемы · 2026</div>
+    <h1>Экономия — это тоже<br><em>заработок</em></h1>
+    <p class="hero-lead">Если ты тратишь на 3 000 ₽ меньше каждый месяц — это те же 3 000 ₽ в кармане. Ниже собраны рабочие способы платить меньше за то, что ты и так покупаешь: кешбэк, промокоды, банковские бонусы и лайфхаки с доставкой еды.</p>
+    <div class="hero-chips">
+      <div class="chip">🛍️ <strong>Кешбэк</strong> до 30% в любом магазине</div>
+      <div class="chip">🍕 <strong>Еда со скидкой 50%</strong> на первый заказ</div>
+      <div class="chip">💳 <strong>Бонусы</strong> до 1 500 ₽ за открытие карты</div>
+      <div class="chip">🏦 <strong>Вклад</strong> с приветственной надбавкой</div>
+      <div class="chip">📈 <strong>10–30 000 ₽/год</strong> пассивной экономии</div>
+    </div>
+    <div class="hero-btns">
+      <a class="btn-main" href="https://grabbenefit.ru/cashback-bonuses-auto/" target="_blank" >🛍️ Подключить кешбэк бесплатно</a>
+      <a class="btn-ghost" href="#" onclick="document.getElementById('banks').scrollIntoView({behavior:'smooth'});return false;">Карты с бонусами ↓</a>
+    </div>
+  </div>
+</section>
+
+<!-- GRABBENEFIT -->
+<section class="section">
+  <div class="w">
+    <div class="sec-label">Кешбэк и промокоды</div>
+    <h2 class="sec-h">Деньги, которые ты просто не забираешь</h2>
+    <p class="sec-sub">Промокод на скидку 10–30% существует почти на любой магазин. Просто никто не ищет.</p>
+    <div class="grab-card fade-up">
+      <div class="grab-top">
+        <div>
+          <h3>GrabBenefit — агрегатор кешбэка и промокодов</h3>
+          <p>Одна регистрация — и ты видишь актуальные промокоды, кешбэк-офферы и скидки по сотням магазинов сразу. Кешбэк начисляется автоматически, ничего не нужно делать вручную.</p>
+        </div>
+        <div class="grab-big">🎁</div>
+      </div>
+      <div class="grab-body">
+        <div class="grab-feat">
+          <div class="gf-icon">🛒</div>
+          <div><div class="gf-t">Wildberries · Ozon · AliExpress</div><div class="gf-d">Работает со всеми крупными маркетплейсами и интернет-магазинами</div></div>
+        </div>
+        <div class="grab-feat">
+          <div class="gf-icon">💊</div>
+          <div><div class="gf-t">Аптеки и сервисы подписок</div><div class="gf-d">Здоровье, стриминг, сервисы доставки — кешбэк везде</div></div>
+        </div>
+        <div class="grab-feat">
+          <div class="gf-icon">⚡</div>
+          <div><div class="gf-t">Автоматическое начисление</div><div class="gf-d">Совершаешь покупку через GrabBenefit — кешбэк зачисляется сам</div></div>
+        </div>
+        <div class="grab-feat">
+          <div class="gf-icon">🔔</div>
+          <div><div class="gf-t">Уведомления о лучших офферах</div><div class="gf-d">Не нужно мониторить вручную — самые горячие скидки придут сами</div></div>
+        </div>
+      </div>
+      <div class="grab-footer">
+        <a class="btn-main" href="https://grabbenefit.ru/cashback-bonuses-auto/" target="_blank" >🛍️ Подключить кешбэк на GrabBenefit →</a>
+        <span style="font-size:.82rem;color:var(--muted);">✅ Регистрация бесплатна · Начни экономить сегодня</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOD HACK — без блока аренды номеров -->
+<section class="section alt">
+  <div class="w">
+    <div class="sec-label">Лайфхак с доставкой еды</div>
+    <h2 class="sec-h">Заказывай еду со скидкой до 50%</h2>
+    <p class="sec-sub">Все крупные сервисы доставки дают большие скидки новым пользователям — от 30% до 50% на первый заказ.</p>
+    <div class="food-card fade-up">
+      <div class="food-head">
+        <div class="food-icon">🍕</div>
+        <div>
+          <h3>Скидка 30–50% на первый заказ в каждом сервисе</h3>
+          <p>Яндекс Еда, Самокат, Delivery Club, СберМаркет — у каждого свои щедрые бонусы для новичков. Используй их все по очереди.</p>
+        </div>
+      </div>
+      <div class="food-body">
+        <div class="food-steps">
+          <div class="food-step">
+            <div class="fs-n">1</div>
+            <div class="fs-text"><strong>Выбери сервис с акцией</strong><span>Зайди в Яндекс Еда, Самокат, Delivery Club или СберМаркет — у каждого есть приветственный промокод для новых пользователей.</span></div>
+          </div>
+          <div class="food-step">
+            <div class="fs-n">2</div>
+            <div class="fs-text"><strong>Зарегистрируй новый аккаунт</strong><span>Создай аккаунт как новый пользователь и активируй приветственный промокод при первом заказе.</span></div>
+          </div>
+          <div class="food-step">
+            <div class="fs-n">3</div>
+            <div class="fs-text"><strong>Оформляй заказ со скидкой</strong><span>Скидка 30–50% применяется автоматически — экономия с одного заказа составляет 300–500 ₽.</span></div>
+          </div>
+          <div class="food-step">
+            <div class="fs-n">4</div>
+            <div class="fs-text"><strong>Повторяй с другим сервисом</strong><span>Использовал акцию на Яндекс Еда — переходи на Самокат, затем Delivery Club, СберМаркет. Потом снова по кругу.</span></div>
+          </div>
+        </div>
+        <div style="margin-bottom:1.25rem;">
+          <div style="font-size:.78rem;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.08em;margin-bottom:.6rem;">Работает в этих сервисах:</div>
+          <div class="food-services">
+            <span class="svc-tag">🟡 Яндекс Еда</span>
+            <span class="svc-tag">🟢 Самокат</span>
+            <span class="svc-tag">🔵 Delivery Club</span>
+            <span class="svc-tag">🟢 СберМаркет</span>
+            <span class="svc-tag">🟠 Кухня на районе</span>
+            <span class="svc-tag">🔴 Лавка</span>
+          </div>
+        </div>
+        <div class="calc-box">
+          <div><div class="calc-val">1 000 ₽</div><div class="calc-l">стоимость заказа</div></div>
+          <div><div class="calc-val">500–700 ₽</div><div class="calc-l">платишь со скидкой</div></div>
+          <div><div class="calc-val">300–500 ₽</div><div class="calc-l">экономия с заказа</div></div>
+          <div><div class="calc-val">3 600–6 000 ₽</div><div class="calc-l">за 12 заказов в месяц</div></div>
+          <div><div class="calc-val">6 сервисов</div><div class="calc-l">акций по кругу</div></div>
+          <div><div class="calc-val">до 72 000 ₽</div><div class="calc-l">экономия за год</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- QUICK TIPS -->
+<section class="section">
+  <div class="w">
+    <div class="sec-label">Быстрые способы</div>
+    <h2 class="sec-h">Ещё 3 способа платить меньше</h2>
+    <div class="tips-grid">
+      <div class="tip-card fade-up">
+        <div class="tip-icon">📦</div>
+        <div class="tip-t">Самовывоз из ПВЗ</div>
+        <p>Ozon и Wildberries дают скидку при отказе от курьерской доставки. 50–300 ₽ с заказа — мелочь, но за год набегает прилично.</p>
+      </div>
+      <div class="tip-card fade-up">
+        <div class="tip-icon">🔄</div>
+        <div class="tip-t">Подписки с кешбэком</div>
+        <p>Яндекс Плюс и СберПрайм возвращают 5–10% с каждой покупки в экосистеме. Если пользуешься сервисами — подписка окупается за 2–3 заказа.</p>
+      </div>
+      <div class="tip-card fade-up">
+        <div class="tip-icon">🎯</div>
+        <div class="tip-t">«Первый заказ» везде</div>
+        <p>Акции для новичков работают не только в еде, но и в аптеках, такси, стриминге, каршеринге. Следи за новыми сервисами — и экономь при каждом старте.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BANKS -->
+<section class="section alt" id="banks">
+  <div class="w">
+    <div class="sec-label">Банковские карты с кешбэком</div>
+    <h2 class="sec-h">Деньги за то, что ты и так тратишь</h2>
+    <p class="sec-sub">Оформляешь карту один раз, платишь как обычно — и часть денег возвращается. Плюс приветственные бонусы при открытии.</p>
+    <div class="banks-grid">
+
+      <div class="bank-card fade-up">
+        <div class="bank-head"><div class="bank-logo bl-tbank">Т</div><div><div class="bank-name">Т-Банк · карта Black</div><div class="bank-type">Дебетовая · Кешбэк до 30%</div></div></div>
+        <div class="bank-body">
+          <div class="bonus-pill">🎁 +500 ₽ после первой покупки от 500 ₽</div>
+          <div class="bank-feats">
+            <div class="bf"><span class="bf-ic">💰</span><div>Кешбэк <strong>1% на всё</strong>, до 30% в выбранных категориях ежемесячно</div></div>
+            <div class="bf"><span class="bf-ic">🎯</span><div>Сам выбираешь категории: кафе, АЗС, аптеки, супермаркеты</div></div>
+            <div class="bf"><span class="bf-ic">📈</span><div>Накопительный счёт с процентом на остаток</div></div>
+          </div>
+        </div>
+        <div class="bank-foot"><a class="btn-bank btn-tbank" href="https://tbank.ru/baf/1RRDGCyWPnZ" target="_blank" >Оформить с бонусом 500 ₽ →</a></div>
+      </div>
+
+      <div class="bank-card fade-up">
+        <div class="bank-head"><div class="bank-logo bl-alfa">А</div><div><div class="bank-name">Альфа-Банк · Альфа-Карта</div><div class="bank-type">Бесплатная навсегда · до 30%</div></div></div>
+        <div class="bank-body">
+          <div class="bonus-pill">🎁 +1 500 ₽ тебе + 500 ₽ другу по ссылке</div>
+          <div class="bank-feats">
+            <div class="bf"><span class="bf-ic">💰</span><div>До <strong>30% кешбэка</strong> в трёх выбранных категориях, лимит 5 000 ₽/мес</div></div>
+            <div class="bf"><span class="bf-ic">🆓</span><div>Обслуживание <strong>бесплатно навсегда</strong> — без условий</div></div>
+            <div class="bf"><span class="bf-ic">🔄</span><div>Меняй категории каждый месяц под свои траты</div></div>
+          </div>
+        </div>
+        <div class="bank-foot"><a class="btn-bank btn-alfa" href="https://alfa.me/FOqU-G" target="_blank" >Оформить Альфа-Карту с бонусом →</a></div>
+      </div>
+
+      <div class="bank-card fade-up">
+        <div class="bank-head"><div class="bank-logo bl-ozon">O</div><div><div class="bank-name">Ozon Карта</div><div class="bank-type">Кешбэк реальными рублями</div></div></div>
+        <div class="bank-body">
+          <div class="bonus-pill">🎁 Приветственный бонус при регистрации</div>
+          <div class="bank-feats">
+            <div class="bf"><span class="bf-ic">💰</span><div>До <strong>30% на товары с зелёной ценой</strong> на Ozon</div></div>
+            <div class="bf"><span class="bf-ic">🎯</span><div>До <strong>25% в 3 выбранных категориях</strong> вне маркетплейса</div></div>
+            <div class="bf"><span class="bf-ic">💵</span><div>Кешбэк <strong>реальными рублями</strong> — не баллами, выводи без ограничений</div></div>
+          </div>
+        </div>
+        <div class="bank-foot"><a class="btn-bank btn-ozon" href="https://ozon.ru/fintech/promo/ref/IDZCSP1P-" target="_blank" >Оформить Ozon Карту →</a></div>
+      </div>
+
+      <div class="bank-card fade-up">
+        <div class="bank-head"><div class="bank-logo bl-yandex">Я</div><div><div class="bank-name">Яндекс Банк</div><div class="bank-type">Кешбэк в экосистеме Яндекса</div></div></div>
+        <div class="bank-body">
+          <div class="bonus-pill">🎁 Бонус за регистрацию по ссылке</div>
+          <div class="bank-feats">
+            <div class="bf"><span class="bf-ic">💰</span><div><strong>Повышенный кешбэк</strong> внутри экосистемы: Такси, Маркет, Кино, Еда</div></div>
+            <div class="bf"><span class="bf-ic">⭐</span><div>Баллы Плюса — тратишь на такси, кино, доставку и сервисы</div></div>
+            <div class="bf"><span class="bf-ic">📱</span><div>Полностью мобильный банк, удобное приложение</div></div>
+          </div>
+        </div>
+        <div class="bank-foot"><a class="btn-bank btn-yandex" href="https://bank.yandex.ru/invite?refid=8LdDpqG4CLW" target="_blank" >Открыть Яндекс Банк с бонусом →</a></div>
+      </div>
+
+      <div class="bank-card fade-up">
+        <div class="bank-head"><div class="bank-logo bl-vtb">ВТБ</div><div><div class="bank-name">ВТБ · Мультикарта</div><div class="bank-type">Госбанк · Кешбэк на каждый день</div></div></div>
+        <div class="bank-body">
+          <div class="bonus-pill">🎁 Приветственный бонус при открытии</div>
+          <div class="bank-feats">
+            <div class="bf"><span class="bf-ic">💰</span><div>До <strong>5% кешбэка</strong> в выбранных категориях повседневных трат</div></div>
+            <div class="bf"><span class="bf-ic">🏦</span><div>Надёжный госбанк, <strong>отделения по всей стране</strong></div></div>
+            <div class="bf"><span class="bf-ic">🆓</span><div>Бесплатное обслуживание при выполнении условий</div></div>
+          </div>
+        </div>
+        <div class="bank-foot"><a class="btn-bank btn-vtb" href="https://vtb.ru/l/x1639t8x" target="_blank" >Оформить карту ВТБ →</a></div>
+      </div>
+
+      <div class="bank-card fade-up">
+        <div class="bank-head"><div class="bank-logo bl-bcs">BCS</div><div><div class="bank-name">БКС Банк</div><div class="bank-type">Кешбэк + инвестиции в одном</div></div></div>
+        <div class="bank-body">
+          <div class="bonus-pill">🎁 Бонус за открытие по реф-ссылке</div>
+          <div class="bank-feats">
+            <div class="bf"><span class="bf-ic">💰</span><div><strong>Кешбэк рублями</strong> + инвестиционные привилегии</div></div>
+            <div class="bf"><span class="bf-ic">📊</span><div>Доступ к <strong>брокерскому счёту</strong> в одном приложении</div></div>
+            <div class="bf"><span class="bf-ic">📈</span><div>Кешбэк можно направлять <strong>на инвестиции</strong></div></div>
+          </div>
+        </div>
+        <div class="bank-foot"><a class="btn-bank btn-bcs" href="https://bcs.ru/friends/accept-invitation?promo=buydil0jx" target="_blank" >Открыть счёт в БКС →</a></div>
+      </div>
+
+      <div class="bank-card fade-up">
+        <div class="bank-head"><div class="bank-logo bl-gpb">ГПБ</div><div><div class="bank-name">Газпромбанк · Умная карта</div><div class="bank-type">100% кешбэк в супермаркетах</div></div></div>
+        <div class="bank-body">
+          <div class="bonus-pill">🎁 До 1 000 ₽ бонусами за первые покупки</div>
+          <div class="bank-feats">
+            <div class="bf"><span class="bf-ic">🛒</span><div>Акция: <strong>кешбэк 100% в супермаркетах</strong> — до 1 000 бонусов при открытии</div></div>
+            <div class="bf"><span class="bf-ic">🤖</span><div>Кешбэк <strong>автоматически повышается</strong> в самой частой категории трат</div></div>
+            <div class="bf"><span class="bf-ic">🏦</span><div>Один из крупнейших <strong>государственных банков</strong> страны</div></div>
+          </div>
+        </div>
+        <div class="bank-foot"><a class="btn-bank btn-gpb" href="https://s.gpb.ru/w/vqvp4hIuk" target="_blank" >Оформить карту Газпромбанка →</a></div>
+      </div>
+
+      <div class="bank-card fade-up">
+        <div class="bank-head"><div class="bank-logo bl-rshb">РСХБ</div><div><div class="bank-name">Россельхозбанк · Вклад</div><div class="bank-type">Надбавка для новых вкладчиков</div></div></div>
+        <div class="bank-body">
+          <div class="bonus-pill">🎁 Приветственная надбавка к ставке</div>
+          <div class="bank-feats">
+            <div class="bf"><span class="bf-ic">📈</span><div><strong>Повышенная ставка</strong> по вкладу для новых клиентов банка</div></div>
+            <div class="bf"><span class="bf-ic">🛡️</span><div>Вклады <strong>застрахованы АСВ</strong> на сумму до 1 400 000 ₽</div></div>
+            <div class="bf"><span class="bf-ic">🏦</span><div>Государственный банк — <strong>один из самых надёжных</strong> в России</div></div>
+          </div>
+        </div>
+        <div class="bank-foot"><a class="btn-bank btn-rshb" href="https://www.rshb.ru/natural/referal-programm/deposit02?utm_source=referal_sf&refererCode=OXXK7ENS7D&productId=DEPOSIT01&referalCode=F8GDQVMDD6" target="_blank" >Открыть вклад с надбавкой →</a></div>
+      </div>
+
+    </div>
+    <div class="lh-box fade-up">
+      <h4>💡 Лайфхак: комбинируй карты</h4>
+      <p>Оформи 2–3 карты с <strong>разными категориями кешбэка</strong> и плати той, которая даёт максимум в конкретном месте. На продукты — Газпромбанк или Т-Банк, на кафе — Альфа-Карта, на онлайн-покупки — Ozon Карта. Итоговая экономия за год легко составит <strong>10 000–30 000 ₽</strong> без каких-либо дополнительных усилий.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="w">
+    <div class="conclusion fade-up">
+      <div class="icon">💬</div>
+      <h3>Экономия — это не про «затянуть пояс»</h3>
+      <p>Это про то, чтобы система работала на тебя, а не ты на неё. Кешбэк-карты, промокоды и агрегаторы скидок — всё это инструменты, которые уже существуют. Нужно просто начать ими пользоваться.</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>© 2026 onlinedu365 · Информация носит ознакомительный характер</p>
+</footer>
+
+<script>
+var btn=document.getElementById('themeBtn');
+var root=document.documentElement;
+var saved=localStorage.getItem('odu365-eco-theme')||'light';
+root.setAttribute('data-theme',saved);
+btn.textContent=saved==='dark'?'☀️':'🌙';
+btn.addEventListener('click',function(){
+  var t=root.getAttribute('data-theme')==='dark'?'light':'dark';
+  root.setAttribute('data-theme',t);
+  localStorage.setItem('odu365-eco-theme',t);
+  btn.textContent=t==='dark'?'☀️':'🌙';
+});
+var obs=new IntersectionObserver(function(e){e.forEach(function(i){if(i.isIntersecting)i.target.classList.add('visible');});},{threshold:0.06});
+document.querySelectorAll('.fade-up').forEach(function(el){obs.observe(el);});
+</script>
+</body>
+</html>
